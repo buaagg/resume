@@ -1,295 +1,153 @@
 % (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
-
 % (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
-
 % (c) 2008 Nathaniel Johnston <nathaniel@nathanieljohnston.com> http://www.nathanieljohnston.com
-
 % (c) 2011 Scott Clark <sc932@cornell.edu> http://cam.cornell.edu/~sc932
-
 % (c) 2013 Yi Chao <yichao@mail.bnu.edu.cn> http://blog.51isoft.com
 %
-
 %This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
-
 \documentclass[letterpaper,11pt,UTF8,nofonts]{ctexart}
-
 \newlength{\outerbordwidth}
-
 \pagestyle{empty}
-
 \raggedbottom
-
 \raggedright
-
 \usepackage[svgnames]{xcolor}
-
 \usepackage{framed}
-
 \usepackage{tocloft}
-
 \setCJKmainfont[BoldFont={Heiti SC},ItalicFont={STKaiti}]{STSong}
-
 %-----------------------------------------------------------
-
 %Edit these values as you see fit
-
 \setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
-
 \definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
-
 \definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
 
-
 %-----------------------------------------------------------
-
 %Margin setup
-
 \setlength{\evensidemargin}{-0.25in}
-
 \setlength{\headheight}{-0.25in}
-
 \setlength{\headsep}{0in}
-
 \setlength{\oddsidemargin}{-0.25in}
-
 \setlength{\paperheight}{11in}
-
 \setlength{\paperwidth}{8.5in}
-
 \setlength{\tabcolsep}{0in}
-
 \setlength{\textheight}{9.75in}
-
 \setlength{\textwidth}{7in}
-
 \setlength{\topmargin}{-0.3in}
-
 \setlength{\topskip}{0in}
-
 \setlength{\voffset}{0.1in}
-
 %-----------------------------------------------------------
-
 %Custom commands
-
 \newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
 
 %\newcommand{\resheading}[1]{\vspace{8pt} \textbf{\Large #1 \vphantom{p\^{E}}}\vspace{-5pt}}
-
 \newcommand{\resheading}[1]{\vspace{5pt}
 
-  \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
-
+    \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
     \begin{shaded}
-
-\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
-
+        \setlength{\fboxsep}{0pt}
+        \framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
     \end{shaded}
-
   }\vspace{-8pt}
-
 }
 
 \newcommand{\ressubheading}[4]{
+    \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+        \textbf{#1} & #2 \\
+        \textit{#3} & \textit{#4} \\
+    \end{tabular*}\vspace{-6pt}
+}
 
-\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-
-		\textbf{#1} & #2 \\
-
-		\textit{#3} & \textit{#4} \\
-
-\end{tabular*}\vspace{-6pt}}
-
-
-
-\newcommand{\resonesubheading}[1]{
-
-\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-
-		\textbf{#1} \\
-
-\end{tabular*}\vspace{-6pt}}
 
 %-----------------------------------------------------------
-
 \begin{document}
-
-\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
-
-\textbf{\Large 易超} & \textbf{\today} \\
-
-yichaonet@gmail.com & http://blog.51isoft.com \\
-
-\end{tabular*}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\resheading{教育经历}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{itemize}
-
-\item
-
-	\ressubheading{北京师范大学}{北京市}{计算机科学与技术专业 学士，计算机软件与理论专业 硕士}{2007 - 2013}
-
-	\begin{itemize}
-
-		\resitem{北京师范大学ACM/ICPC代表队学生教练}
-
-		\resitem{保送进入研究生阶段学习}
-
-	\end{itemize}
-
-\end{itemize}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\resheading{技能}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{itemize}
-
-\item {\bf 开发语言：} C/C++, jQuery, PHP
-
-\item {\bf 兴趣方向：} 算法、网络编程、网页开发、操作系统
-
-\item 较强的学习能力，对新技术有较高的热情，勇于尝试新鲜事物。
-
-\end{itemize}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\resheading{项目经历}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{itemize}
-
-\item \ressubheading{BNU Online Judge}{C/C++, PHP, Linux}{一个开源的，功能齐备的在线测评系统}{2009 至今}
-
-  \begin{itemize}
-
-    \resitem{网站地址：http://www.bnuoj.com，源代码托管地址：http://github.com/51isoft/bnuoj}
-    
-    \resitem{拥有远程测评、比赛回放、代码挑战、题目分类等创新功能。}
-
-    \resitem{2009年4月1日BNUOJ第一版正式上线，地址：http://www.bnuoj.com/contest}
-    
+    \begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+        \textbf{\Large 易超} & \textbf{\today} \\
+        yichaonet@gmail.com & http://blog.51isoft.com \\
+    \end{tabular*}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \resheading{教育经历}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \begin{itemize}
-    
-    	\resitem{本科生科研基金优秀项目，初次在Linux平台下使用PHP/MySQL/C++进行项目开发}
-    	
-    	\resitem{使用socket进行通信，调度程序使用多线程技术（可分布式判题），判题程序使用ptrace沙盒技术监视用户程序系统调用}
-    	
-    	\resitem{同年9月1日用户量达到1000人，次年3月提交量达到50000次。}
-    	
-    	\resitem{项目使用SVN托管于Google Code：http://code.google.com/p/bnuoj}
-    	
+    \item
+        \ressubheading{北京师范大学}{北京市}{计算机科学与技术专业 学士，计算机软件与理论专业 硕士}{2007 - 2013}
+        \begin{itemize}
+            \resitem{北京师范大学ACM/ICPC代表队学生教练}
+            \resitem{保送进入研究生阶段学习}
+        \end{itemize}
     \end{itemize}
-    
-    \resitem{2012年2月上线BNUOJ第二版，地址：http://www.bnuoj.com/bnuoj}
-    
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \resheading{技能}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \begin{itemize}
-    
-    	\resitem{Web端UI重构，引入jQuery/jQueryUI等前端技术，大量使用AJAX技术}
-    	
-    	\resitem{引入vJudge（C++实现），使用libcurl，通过模拟提交的方式使用其他OJ判题}
-    	
-    	\resitem{整理判题端代码并使用面向对象的方法进行重构，添加Challenge功能}
-    	
-    	\resitem{衍生项目：acmicpc.info 第二届“算法控”比赛平台}
-    	
+        \item {\bf 开发语言：} C/C++, jQuery, PHP
+        \item {\bf 兴趣方向：} 算法、网络编程、网页开发、操作系统
+        \item 较强的学习能力，对新技术有较高的热情，勇于尝试新鲜事物。
     \end{itemize}
-
-    \resitem{2013年4月上线BNUOJ第三版，地址：http://www.bnuoj.com/v3}
-    
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \resheading{项目经历}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \begin{itemize}
-    
-    	\resitem{整理Web端代码并进行重构，使其模块更加细化；UI摒弃jQueryUI，转用Bootstrap}
-    	
-    	\resitem{上线短信提醒平台（http://www.bnuoj.com/sms）和微信公众平台（bnuacm）}
-    	
-    	\resitem{项目托管地址由Google Code迁移至Github}
-    	
+        \item
+            \ressubheading{BNU Online Judge}{C/C++, PHP, Linux}{一个开源的，功能齐备的在线测评系统}{2009 至今}
+            \begin{itemize}
+                \resitem{网站地址：http://www.bnuoj.com，源代码托管地址：http://github.com/51isoft/bnuoj}
+                \resitem{拥有远程测评、比赛回放、代码挑战、题目分类等创新功能。}
+                \resitem{2009年4月1日BNUOJ第一版正式上线，地址：http://www.bnuoj.com/contest}
+                \begin{itemize}
+                    \resitem{本科生科研基金优秀项目，初次在Linux平台下使用PHP/MySQL/C++进行项目开发}
+                    \resitem{使用socket进行通信，调度程序使用多线程技术（可分布式判题），判题程序使用ptrace沙盒技术监视用户程序系统调用}
+                    \resitem{同年9月1日用户量达到1000人，次年3月提交量达到50000次。}
+                    \resitem{项目使用SVN托管于Google Code：http://code.google.com/p/bnuoj}
+                \end{itemize}
+                \resitem{2012年2月上线BNUOJ第二版，地址：http://www.bnuoj.com/bnuoj}
+                \begin{itemize}
+                    \resitem{Web端UI重构，引入jQuery/jQueryUI等前端技术，大量使用AJAX技术}
+                    \resitem{引入vJudge（C++实现），使用libcurl，通过模拟提交的方式使用其他OJ判题}
+                    \resitem{整理判题端代码并使用面向对象的方法进行重构，添加Challenge功能}
+                    \resitem{衍生项目：acmicpc.info 第二届“算法控”比赛平台}
+                \end{itemize}
+                \resitem{2013年4月上线BNUOJ第三版，地址：http://www.bnuoj.com/v3}
+                \begin{itemize}
+                    \resitem{整理Web端代码并进行重构，使其模块更加细化；UI摒弃jQueryUI，转用Bootstrap}
+                    \resitem{上线短信提醒平台（http://www.bnuoj.com/sms）和微信公众平台（bnuacm）}
+                    \resitem{项目托管地址由Google Code迁移至Github}
+                \end{itemize}
+            \end{itemize}
+        \item
+            \ressubheading{具有自主学习功能的形式语言与自动机智能化课程软件}{VC++, MFC}{北师大国家大学生创新性实验计划项目}{2009-2010}
+            \begin{itemize}
+                \resitem{配合《形式与言语自动机》课程使用的教学软件，项目获得校级优秀}
+                \resitem{本人为项目主持人，参与软件架构设计以及代码实现}
+            \end{itemize}
+    \end{itemize}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \resheading{所获荣誉}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{itemize}
+        \item 2012年、2010年ACM-ICPC亚洲区域赛金奖，2011年ACM-ICPC亚洲区域赛银奖
+        \item 2009年首届“中科杯”全国软件设计大赛三等奖
+        \item 2008-2011年北京师范大学本科生竞赛奖学金，2012年北京师范大学研究生竞赛奖学金
+        \item 2008-2009年北京师范大学社会工作奖学金
+    \end{itemize}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \resheading{社会活动}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{itemize}
+        \item 北京师范大学ACM/ICPC队学生教练，负责维护校ACM队服务器
+        \item 北京师范大学白鸽青年志愿者协会网络部部长（2008-2009）
+    \end{itemize}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \resheading{发表论文}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{itemize}
+        \item Yi, Chao, Xiao Yu Du, Su Feng, Si Yuan Li, and Yue Zhuo. {\it The Design of Course-Oriented Online Judge}. Advanced Materials Research 433 (2012): 4736-4740.
+        \item Du, Xiaoyu, Chao Yi, Yu Wei, Su Feng, and Zhi Gong. {\it Design of Automata Online Judge}. In Information Engineering and Computer Science (ICIECS), 2010 2nd International Conference on, pp. 1-4. IEEE, 2010.
+        \item Du, Xiaoyu, Chao Yi, Su Feng, Yu Wei, and Qiao Tang. {\it Autonomic learning in Course Software: A case study}. In Computer Application and System Modeling (ICCASM), 2010 International Conference on, vol. 8, pp. V8-154. IEEE, 2010.
     \end{itemize}
 
-	\end{itemize}
-
-\item \ressubheading{具有自主学习功能的形式语言与自动机智能化课程软件}{VC++, MFC}{北师大国家大学生创新性实验计划项目}{2009-2010}
-
-\begin{itemize}
-
-    \resitem{配合《形式与言语自动机》课程使用的教学软件，项目获得校级优秀}
-
-    \resitem{本人为项目主持人，参与软件架构设计以及代码实现}
-
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \resheading{个人信息}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{itemize}
+        \item {\bf 兴趣爱好：} 台球、羽毛球、摄影
     \end{itemize}
-
-
-\end{itemize}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\resheading{所获荣誉}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{itemize}
-
-\item 2012年、2010年ACM-ICPC亚洲区域赛金奖，2011年ACM-ICPC亚洲区域赛银奖
-
-\item 2009年首届“中科杯”全国软件设计大赛三等奖
-
-\item 2008-2011年北京师范大学本科生竞赛奖学金，2012年北京师范大学研究生竞赛奖学金
-
-\item 2008-2009年北京师范大学社会工作奖学金
-
-\end{itemize}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\resheading{社会活动}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{itemize}
-
-\item 北京师范大学ACM/ICPC队学生教练，负责维护校ACM队服务器
-
-\item 北京师范大学白鸽青年志愿者协会网络部部长（2008-2009）
-
-\end{itemize}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\resheading{发表论文}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{itemize}
-
-\item Yi, Chao, Xiao Yu Du, Su Feng, Si Yuan Li, and Yue Zhuo. {\it The Design of Course-Oriented Online Judge}. Advanced Materials Research 433 (2012): 4736-4740.
-
-\item Du, Xiaoyu, Chao Yi, Yu Wei, Su Feng, and Zhi Gong. {\it Design of Automata Online Judge}. In Information Engineering and Computer Science (ICIECS), 2010 2nd International Conference on, pp. 1-4. IEEE, 2010.
-
-\item Du, Xiaoyu, Chao Yi, Su Feng, Yu Wei, and Qiao Tang. {\it Autonomic learning in Course Software: A case study}. In Computer Application and System Modeling (ICCASM), 2010 International Conference on, vol. 8, pp. V8-154. IEEE, 2010.
-
-\end{itemize}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\resheading{个人信息}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{itemize}
-
-\item {\bf 兴趣爱好：} 台球、羽毛球、摄影
-
-\end{itemize}
-
 \end{document}
