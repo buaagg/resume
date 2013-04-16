@@ -5,7 +5,7 @@
 % (c) 2013 Yi Chao <yichao@mail.bnu.edu.cn> http://blog.51isoft.com
 %
 %This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
-\documentclass[letterpaper,11pt,UTF8,nofonts]{ctexart}
+\documentclass[letterpaper,11pt]{article}
 \newlength{\outerbordwidth}
 \pagestyle{empty}
 \raggedbottom
@@ -14,7 +14,6 @@
 \usepackage{framed}
 \usepackage{tocloft}
 \usepackage[USenglish]{datetime}
-\setCJKmainfont[BoldFont={Heiti SC},ItalicFont={STKaiti}]{STSong}
 %-----------------------------------------------------------
 %Edit these values as you see fit
 \setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
@@ -37,7 +36,7 @@
 \setlength{\voffset}{0.1in}
 %-----------------------------------------------------------
 %Custom commands
-\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resitem}[1]{\item #1 \vspace{0pt}}
 
 %\newcommand{\resheading}[1]{\vspace{8pt} \textbf{\Large #1 \vphantom{p\^{E}}}\vspace{-5pt}}
 \newcommand{\resheading}[1]{\vspace{5pt}
@@ -92,21 +91,21 @@
             \begin{itemize}
                 \resitem{Website: http://www.bnuoj.com, source code: http://github.com/51isoft/bnuoj}
                 \resitem{Self designed full-featured online judge with innovated functions like virtual judge, contests replays, categorized problems and challenge sections like {\it Topcoder} }
-                \resitem{BNUOJv1 was released in 2009/04/01, url: http://www.bnuoj.com/contest}
+                \resitem{BNUOJv1 was released in 2009-04-01, url: http://www.bnuoj.com/contest}
                 \begin{itemize}
                     \resitem{Honored as outstanding project by university, my first time developing under Linux}
                     \resitem{WebSocket and multi-threading were used for communication between modules, ptrace was used to build sandbox for programs user submitted}
-                    \resitem{Reached 1,000 users by 2009/09/01, 50,000 submits by 2010/03}
+                    \resitem{Reached 1,000 users by 2009-09-01, 50,000 submits by 2010/03}
                     \resitem{Source code was hosted at http://code.google.com/p/bnuoj using SVN}
                 \end{itemize}
-                \resitem{BNUOJv2 was released in 2012/02, url: http://www.bnuoj.com/bnuoj}
+                \resitem{BNUOJv2 was released in 2012-02, url: http://www.bnuoj.com/bnuoj}
                 \begin{itemize}
                     \resitem{Redesigned UI with jQuery and jQueryUI}
                     \resitem{Introducing vJudge, developed with libcurl by submitting to other OJs}
                     \resitem{Reconstructed judger's code using OOP, added challenge function}
                     \resitem{Spin-off project: acmicpc.info Hackathon Platform}
                 \end{itemize}
-                \resitem{BNUOJv3 was released in 2013/04, url: http://www.bnuoj.com/v3}
+                \resitem{BNUOJv3 was released in 2013-04, url: http://www.bnuoj.com/v3}
                 \begin{itemize}
                     \resitem{Reconstructed front-end code, using Bootstrap replacing jQueryUI}
                     \resitem{SMS alert platform (http://www.bnuoj.com/sms) and Wechat public platform (bnuacm) }
