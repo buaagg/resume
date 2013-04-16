@@ -13,6 +13,7 @@
 \usepackage[svgnames]{xcolor}
 \usepackage{framed}
 \usepackage{tocloft}
+\usepackage[USenglish]{datetime}
 \setCJKmainfont[BoldFont={Heiti SC},ItalicFont={STKaiti}]{STSong}
 %-----------------------------------------------------------
 %Edit these values as you see fit
@@ -60,83 +61,83 @@
 %-----------------------------------------------------------
 \begin{document}
     \begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
-        \textbf{\Large 易超} & \textbf{\today} \\
+        \textbf{\Large Yi Chao} & \textbf{\today} \\
         yichaonet@gmail.com & http://blog.51isoft.com \\
     \end{tabular*}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \resheading{教育经历}
+    \resheading{Education}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \begin{itemize}
     \item
-        \ressubheading{北京师范大学}{北京市}{计算机科学与技术专业 学士，计算机软件与理论专业 硕士}{2007 - 2014}
+        \ressubheading{Beijing Normal University}{Beijing}{B.S. Computer Science, M.S. Computer Software and Theory}{2007 - 2014}
         \begin{itemize}
-            \resitem{北京师范大学ACM/ICPC代表队学生教练}
-            \resitem{保送进入研究生阶段学习}
+            \resitem{Student coach of BNU ACM/ICPC team}
+            \resitem{Organizer and problem provider of BNU Computer Programming Contest}
         \end{itemize}
     \end{itemize}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \resheading{技能}
+    \resheading{Skills}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \begin{itemize}
-        \item {\bf 开发语言：} C/C++, jQuery, PHP
-        \item {\bf 兴趣方向：} 算法、网络编程、网页开发、操作系统
-        \item 较强的学习能力，对新技术有较高的热情，勇于尝试新鲜事物。
+        \item {\bf Development: } C/C++, jQuery, PHP
+        \item {\bf Interest: } Algorithm, Linux, Web developing, Operating System
+        \item I'm curious about new technologies, love to try new things, and good at implementing new ideas.
     \end{itemize}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \resheading{项目经历}
+    \resheading{Projects}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \begin{itemize}
         \item
-            \ressubheading{BNU Online Judge}{C/C++, PHP, Linux}{一个开源的，功能齐备的在线测评系统}{2009 至今}
+            \ressubheading{BNU Online Judge}{C/C++, PHP, Linux}{An open-source, simple but full-featured Onling Judge system}{2009 - now}
             \begin{itemize}
-                \resitem{网站地址：http://www.bnuoj.com，源代码托管地址：http://github.com/51isoft/bnuoj}
-                \resitem{拥有远程测评、比赛回放、代码挑战、题目分类等创新功能。}
-                \resitem{2009年4月1日BNUOJ第一版正式上线，地址：http://www.bnuoj.com/contest}
+                \resitem{Website: http://www.bnuoj.com, source code: http://github.com/51isoft/bnuoj}
+                \resitem{Self designed full-featured online judge with innovated functions like virtual judge, contests replays, categorized problems and challenge sections like {\it Topcoder} }
+                \resitem{BNUOJv1 was released in 2009/04/01, url: http://www.bnuoj.com/contest}
                 \begin{itemize}
-                    \resitem{本科生科研基金优秀项目，初次在Linux平台下使用PHP/MySQL/C++进行项目开发}
-                    \resitem{使用socket进行通信，调度程序使用多线程技术（可分布式判题），判题程序使用ptrace沙盒技术监视用户程序系统调用}
-                    \resitem{同年9月1日用户量达到1000人，次年3月提交量达到50000次。}
-                    \resitem{项目使用SVN托管于Google Code：http://code.google.com/p/bnuoj}
+                    \resitem{Honored as outstanding project by university, my first time developing under Linux}
+                    \resitem{WebSocket and multi-threading were used for communication between modules, ptrace was used to build sandbox for programs user submitted}
+                    \resitem{Reached 1,000 users by 2009/09/01, 50,000 submits by 2010/03}
+                    \resitem{Source code was hosted at http://code.google.com/p/bnuoj using SVN}
                 \end{itemize}
-                \resitem{2012年2月上线BNUOJ第二版，地址：http://www.bnuoj.com/bnuoj}
+                \resitem{BNUOJv2 was released in 2012/02, url: http://www.bnuoj.com/bnuoj}
                 \begin{itemize}
-                    \resitem{Web端UI重构，引入jQuery/jQueryUI等前端技术，大量使用AJAX技术}
-                    \resitem{引入vJudge（C++实现），使用libcurl，通过模拟提交的方式使用其他OJ判题}
-                    \resitem{整理判题端代码并使用面向对象的方法进行重构，添加Challenge功能}
-                    \resitem{衍生项目：acmicpc.info 第二届“算法控”比赛平台}
+                    \resitem{Redesigned UI with jQuery and jQueryUI}
+                    \resitem{Introducing vJudge, developed with libcurl by submitting to other OJs}
+                    \resitem{Reconstructed judger's code using OOP, added challenge function}
+                    \resitem{Spin-off project: acmicpc.info Hackathon Platform}
                 \end{itemize}
-                \resitem{2013年4月上线BNUOJ第三版，地址：http://www.bnuoj.com/v3}
+                \resitem{BNUOJv3 was released in 2013/04, url: http://www.bnuoj.com/v3}
                 \begin{itemize}
-                    \resitem{整理Web端代码并进行重构，使其模块更加细化；UI摒弃jQueryUI，转用Bootstrap}
-                    \resitem{上线短信提醒平台（http://www.bnuoj.com/sms）和微信公众平台（bnuacm）}
-                    \resitem{项目托管地址由Google Code迁移至Github}
+                    \resitem{Reconstructed front-end code, using Bootstrap replacing jQueryUI}
+                    \resitem{SMS alert platform (http://www.bnuoj.com/sms) and Wechat public platform (bnuacm) }
+                    \resitem{Migrating from {\it Google Code} to {\it Github}}
                 \end{itemize}
             \end{itemize}
         \item
-            \ressubheading{具有自主学习功能的形式语言与自动机智能化课程软件}{VC++, MFC}{北师大国家大学生创新性实验计划项目}{2009-2010}
+            \ressubheading{Formal Languages and Automata Course Software}{VC++, MFC}{Sponsored by National Innovation Experiment Program for University Students}{2009-2010}
             \begin{itemize}
-                \resitem{配合《形式与言语自动机》课程使用的教学软件，项目获得校级优秀}
-                \resitem{本人为项目主持人，参与软件架构设计以及代码实现}
+                \resitem{Designed for autonomic learning, honered as university-level outstanding project}
+                \resitem{I'm the leader of this project}
             \end{itemize}
     \end{itemize}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \resheading{所获荣誉}
+    \resheading{Achievements}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \begin{itemize}
-        \item 2012年、2010年ACM-ICPC亚洲区域赛金奖，2011年ACM-ICPC亚洲区域赛银奖
-        \item 2009年首届“中科杯”全国软件设计大赛三等奖
-        \item 2008-2011年北京师范大学本科生竞赛奖学金，2012年北京师范大学研究生竞赛奖学金
-        \item 2008-2009年北京师范大学社会工作奖学金
+        \item Gold medal in ACM-ICPC International Collegiate Programming Contest Regional Contest 2010 and 2012, Silver medal in 2011
+        \item Third-grade award in the first “CS cup” National Software Design contest, 2009
+        \item Scholarship for competition achievements by graduate students, 2009 through 2012
+        \item Scholarship for social activities, 2008 and 2009
     \end{itemize}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \resheading{社会活动}
+    \resheading{Social Activities}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \begin{itemize}
-        \item 北京师范大学ACM/ICPC队学生教练，负责维护校ACM队服务器
-        \item 北京师范大学白鸽青年志愿者协会网络部部长（2008-2009）
+        \item Student coach of BNU ACM/ICPC team, maitaining web servers for the team
+        \item Head of network department, Beijing Normal University ``White-Dove'' Youth Volunteer Association, 2008 and 2009
     \end{itemize}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \resheading{发表论文}
+    \resheading{Publications}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \begin{itemize}
         \item Yi, Chao, Xiao Yu Du, Su Feng, Si Yuan Li, and Yue Zhuo. {\it The Design of Course-Oriented Online Judge}. Advanced Materials Research 433 (2012): 4736-4740.
@@ -145,9 +146,9 @@
     \end{itemize}
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \resheading{个人信息}
+    \resheading{Personal Informations}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \begin{itemize}
-        \item {\bf 兴趣爱好：} 台球、羽毛球、摄影
+        \item {\bf Hobbies: } Billiards, badminton, photography
     \end{itemize}
 \end{document}
