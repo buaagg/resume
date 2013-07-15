@@ -1,0 +1,142 @@
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+% (c) 2008 Nathaniel Johnston <nathaniel@nathanieljohnston.com> http://www.nathanieljohnston.com
+% (c) 2011 Scott Clark <sc932@cornell.edu> http://cam.cornell.edu/~sc932
+% (c) 2013 Yi Chao <yichao@mail.bnu.edu.cn> http://blog.51isoft.com
+%
+%This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
+\documentclass[letterpaper,11pt,UTF8,nofonts]{ctexart}
+\newlength{\outerbordwidth}
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\usepackage[svgnames]{xcolor}
+\usepackage{framed}
+\usepackage{tocloft}
+\setCJKmainfont[BoldFont={Heiti SC},ItalicFont={STKaiti}]{STSong}
+%-----------------------------------------------------------
+%Edit these values as you see fit
+\setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
+\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
+\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
+
+%-----------------------------------------------------------
+%Margin setup
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\headheight}{-0.25in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\tabcolsep}{0in}
+\setlength{\textheight}{9.75in}
+\setlength{\textwidth}{7in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\topskip}{0in}
+\setlength{\voffset}{0.1in}
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+
+%\newcommand{\resheading}[1]{\vspace{8pt} \textbf{\Large #1 \vphantom{p\^{E}}}\vspace{-5pt}}
+\newcommand{\resheading}[1]{\vspace{5pt}
+
+    \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
+    \begin{shaded}
+        \setlength{\fboxsep}{0pt}
+        \framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
+    \end{shaded}
+  }\vspace{-8pt}
+}
+
+\newcommand{\ressubheading}[4]{
+    \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+        \textbf{#1} & #2 \\
+        \textit{#3} & \textit{#4} \\
+    \end{tabular*}\vspace{-6pt}
+}
+
+
+\newcommand{\ressubheadingsingleline}[2]{
+    \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+        \textbf{#1} & #2 \\
+    \end{tabular*}\vspace{-6pt}
+}
+%-----------------------------------------------------------
+\begin{document}
+    \begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+        \textbf{\Large 管 清文} & \textbf{\today} \\
+        buaa.gg@gmail.com & \\
+	(86)13401157995 &  \\
+	https://github.com/buaagg & \\
+    \end{tabular*}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \resheading{教育经历}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{itemize}
+    \item
+        \ressubheading{北京航空航天大学}{北京市}{软件工程专业 硕士}{2012 - 2015}
+    \item
+        \ressubheading{北京航空航天大学}{北京市}{软件工程专业 学士，应用数学专业 学士}{2008 - 2012}
+%        \begin{itemize}
+%            \resitem{北京航空航天大学ACM/ICPC代表队学生教练}
+%            \resitem{保送进入研究生阶段学习}
+%        \end{itemize}
+    \end{itemize}
+
+	\resheading{所获荣誉}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\begin{itemize}
+		\item \ressubheading{ACM-ICPC国际大学生程序设计竞赛世界总决赛}{第27名}{和2名队友配合，使用C/C++/Java在5个小时内设计算法并编写程序求解指定的问题}{2013}
+		\item \ressubheading{ACM-ICPC国际大学生程序设计竞赛亚洲区域赛}{第5名}{和2名队友配合，使用C/C++/Java在5个小时内设计算法并编写程序求解指定的问题}{2012}
+		\item \ressubheading{ACM-ICPC中国东北地区大学生程序设计竞赛暨中俄大学生对抗赛}{第2名}{和2名队友配合，使用C/C++/Java在5个小时内设计算法并编写程序求解指定的问题}{2013}
+		\item \ressubheading{编程之美全国挑战赛}{全国30强}{由微软亚太研发组织举办，决赛为结对编程:Bing搜索的大数据日志分析和数据呈现}{2013}
+		\item \ressubheading{完美未来之星智能机开发全国挑战赛}{第4名}{由完美世界举办，决赛为3-4人组队，进行智能机应用开发}{2013}
+	\end{itemize}
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \resheading{技能}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{itemize}
+        \item {\bf 开发语言：} C/C++, Java, C\#, Python, PHP 
+%	\item {\bf 开发工具：} Github, \LaTeX
+        \item {\bf 兴趣方向：} 算法、机器学习、个性化推荐、深度挖掘.
+        \item 较强的学习能力，对新技术有较高的热情，勇于尝试新鲜事物。
+    \end{itemize}
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \resheading{社会活动}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{itemize}
+        \item 北京航空航天大学ACM/ICPC队学生教练，负责维护校ACM队服务器和校内选拔赛的筹备.
+    \end{itemize}
+
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \resheading{项目经历}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{itemize}
+    	\item \ressubheadingsingleline{基于Kinect的演示辅助系统}{2011-2012}
+	\begin{itemize}
+		\item {首先通过原生SDK获得手心和手腕的位置，然后通过形态学原理获得指尖位置，并标定拟合，映射到投影屏幕坐标系，使用户能直接在投影屏幕上圈画写字.}
+		%\item 使用C\#, Kinect SDK开发
+	\end{itemize}
+    \end{itemize}
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \resheading{个人信息}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{itemize}
+        \item {\bf 兴趣爱好：} 三国杀、羽毛球
+    \end{itemize}
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    \resheading{联系方式}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    \begin{itemize}
+%        \item {\bf 电话：} 13811387651
+%        \item {\bf 邮箱：} yichaonet@gmail.com
+%        \item {\bf QQ：} 6365786
+%    \end{itemize}
+    
+\end{document}

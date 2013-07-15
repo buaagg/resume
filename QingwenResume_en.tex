@@ -1,0 +1,130 @@
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+% (c) 2008 Nathaniel Johnston <nathaniel@nathanieljohnston.com> http://www.nathanieljohnston.com
+% (c) 2011 Scott Clark <sc932@cornell.edu> http://cam.cornell.edu/~sc932
+% (c) 2013 Yi Chao <yichao@mail.bnu.edu.cn> http://blog.51isoft.com
+%
+%This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
+\documentclass[letterpaper,11pt]{article}
+\newlength{\outerbordwidth}
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\usepackage[svgnames]{xcolor}
+\usepackage{framed}
+\usepackage{tocloft}
+\usepackage[USenglish]{datetime}
+%-----------------------------------------------------------
+%Edit these values as you see fit
+\setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
+\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
+\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
+
+%-----------------------------------------------------------
+%Margin setup
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\headheight}{-0.25in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\tabcolsep}{0in}
+\setlength{\textheight}{9.75in}
+\setlength{\textwidth}{7in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\topskip}{0in}
+\setlength{\voffset}{0.1in}
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{0pt}}
+
+%\newcommand{\resheading}[1]{\vspace{8pt} \textbf{\Large #1 \vphantom{p\^{E}}}\vspace{-5pt}}
+\newcommand{\resheading}[1]{\vspace{5pt}
+
+    \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
+    \begin{shaded}
+        \setlength{\fboxsep}{0pt}
+        \framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
+    \end{shaded}
+  }\vspace{-8pt}
+}
+
+\newcommand{\ressubheading}[4]{
+    \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+        \textbf{#1} & #2 \\
+        \textit{#3} & \textit{#4} \\
+    \end{tabular*}\vspace{-6pt}
+}
+
+\newcommand{\ressubheadingsingleline}[2]{
+    \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+        \textbf{#1} & #2 \\
+    \end{tabular*}\vspace{-6pt}
+}
+
+
+
+%-----------------------------------------------------------
+\begin{document}
+    \begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+        \textbf{\Large Qingwen GUAN} & \textbf{\today} \\
+        buaa.gg@gmail.com &  \\
+	(86)13401157995 & \\
+	https://github.com/buaagg & \\
+    \end{tabular*}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \resheading{Education}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{itemize}
+    \item
+        \ressubheading{Beihang University}{Beijing}{B.S. Software Engineering, B.S. Applied Mathematics, M.S. Software Engineering}{2008 - 2014}
+        \begin{itemize}
+            \resitem{Student coach of BUAA ACM/ICPC team}
+            \resitem{Organizer and problem provider of BUAA Computer Programming Contest}
+        \end{itemize}
+    \end{itemize}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\resheading{Achievements}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\begin{itemize}
+		\item \ressubheading{ACM International Collegiate Programming Contest World Final}{Rank27}
+			{Design algorithm and program to solve the given problem with 2 partners using C/Java}{2013}
+		\item \ressubheading{ACM International Collegiate Programming Contest Asia Regional}{Rank5}
+			{Design algorithm and program to solve the given problem with 2 partners using C/Java}{2012}
+		\item \ressubheading{Beauty of Programming National Invition Contest}{Top30}
+			{Pairing Program: Data Analisis and and Virtualization of Bing Search}{2013}
+		\item \ressubheading{Star of Perfect National Invition Contest}{rank4}
+			{Group Program: Develop applications on smart phone}{2013}
+	\end{itemize}
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \resheading{Skills}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{itemize}
+        \item {\bf Development: } C/C++, Java, C\#, Python, PHP.
+        \item {\bf Interest: } Algorithm, Machine Learning, Personalized Recommendation, Deep Learning.
+        \item I'm curious about new technologies, love to try new things, and good at implementing new ideas.
+    \end{itemize}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \resheading{Projects}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+            \begin{itemize}
+	    \item \ressubheadingsingleline{Presentation Aid System Based on Kinect}{2011-2012}
+    	\end{itemize}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \resheading{Social Activities}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{itemize}
+        \item Student coach of BNU ACM/ICPC team, maitaining web servers for the team
+  %      \item Head of network department, Beijing Normal University ``White-Dove'' Youth Volunteer Association, 2008 and 2009
+    \end{itemize}
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \resheading{Personal Information}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{itemize}
+        \item {\bf Hobbies: } Sanguosha, badminton
+    \end{itemize}
+
+\end{document}
