@@ -1,5 +1,5 @@
 Qingwen:
 	xelatex QingwenResume_cn.tex
-	xelatex QingwenResume_en.tex
+	pdflatex QingwenResume_en.tex
 
 
