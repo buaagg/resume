@@ -1,12 +1,12 @@
-Qingwen:
-	xelatex -output-directory=bin QingwenResume_cn.tex
-	pdflatex -output-directory=bin QingwenResume_en.tex
-	NonTech
+ALL: Tech NonTech
+
+Tech:
+	xelatex -output-directory=bin src/QingwenResume_cn.tex
+	pdflatex -output-directory=bin src/QingwenResume_en.tex
 
 NonTech:
-	xelatex -output-directory=bin QingwenResume_cn_non_tech.tex 
+	xelatex -output-directory=bin src/QingwenResume_cn_non_tech.tex 
 
-.PHONY:
-	NonTech
+.PHONY: Tech NonTech
 
 
