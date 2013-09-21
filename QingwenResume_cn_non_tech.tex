@@ -3,24 +3,18 @@
 % (c) 2008 Nathaniel Johnston <nathaniel@nathanieljohnston.com> http://www.nathanieljohnston.com
 % (c) 2011 Scott Clark <sc932@cornell.edu> http://cam.cornell.edu/~sc932
 % (c) 2013 Yi Chao <yichao@mail.bnu.edu.cn> http://blog.51isoft.com
+% (c) 2013 Qingwen GUAN <buaa.gg@gmail.com>
 %
 %This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
-\documentclass[letterpaper,11pt]{article}
+\documentclass[letterpaper,11pt,UTF8,nofonts]{ctexart}
 \newlength{\outerbordwidth}
-
-\usepackage{titlesec} 
-\newpagestyle{main}{            
-	\setfoot{\textit{Compiled by pdf\TeX{} 3.1415926-2.4-1.40.13 (\TeX{} Live 2012) on OS X 10.8.4 (12E55)}}{}{}
-}
-\pagestyle{main} 
-
-%\pagestyle{empty}
+\pagestyle{empty}
 \raggedbottom
 \raggedright
 \usepackage[svgnames]{xcolor}
 \usepackage{framed}
 \usepackage{tocloft}
-\usepackage[USenglish]{datetime}
+\setCJKmainfont[BoldFont={Heiti SC},ItalicFont={STKaiti}]{STSong}
 %-----------------------------------------------------------
 %Edit these values as you see fit
 \setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
@@ -43,7 +37,7 @@
 \setlength{\voffset}{0.1in}
 %-----------------------------------------------------------
 %Custom commands
-\newcommand{\resitem}[1]{\item #1 \vspace{0pt}}
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
 
 %\newcommand{\resheading}[1]{\vspace{8pt} \textbf{\Large #1 \vphantom{p\^{E}}}\vspace{-5pt}}
 \newcommand{\resheading}[1]{\vspace{5pt}
@@ -63,76 +57,80 @@
     \end{tabular*}\vspace{-6pt}
 }
 
+
 \newcommand{\ressubheadingsingleline}[2]{
     \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
         \textbf{#1} & #2 \\
     \end{tabular*}\vspace{-6pt}
 }
-
-
 %-----------------------------------------------------------
 \begin{document}
     \begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
-        \textbf{\Large Qingwen GUAN} & \textbf{\today} \\
-        buaa.gg@gmail.com &  \\
-	(86) 134 0115 7995 & \\
-	https://github.com/buaagg & \\
+        \textbf{\Large 管 清文} & \textbf{\today} \\
+        buaa.gg@gmail.com & \\
+	(86)13401157995 &  \\
     \end{tabular*}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \resheading{Education}
+    \resheading{教育经历}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \begin{itemize}
     \item
-        \ressubheading{Beihang University}{Beijing}{M.S. Software Engineering}{2012 - 2015}
+        \ressubheadingsingleline{北京航空航天大学~软件工程专业~硕士}{2012 - 2015}
     \item
-        \ressubheading{Beihang University}{Beijing}{B.S. Software Engineering, B.S. Applied Mathematics}{2008 - 2012}
+        \ressubheadingsingleline{北京航空航天大学~软件工程专业~学士}{2008 - 2012}
+	\begin{itemize}
+		\item 学习成绩学院前30\%, 保送推免为本专业研究生
+	\end{itemize}
     \end{itemize}
 
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\resheading{Achievements}
+    \resheading{社会工作}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{itemize}
+    \item \ressubheadingsingleline{北京航空航天大学ACM/ICPC队学生教练}{2012 - 2013}
+	\begin{itemize}
+		\item 带队员去其他省市参加比赛，负责安排团队行程。
+		\item 游走于学校的各个部门，完成出国参赛的相关流程手续。
+%		\item 负责维护ACM校队服务器和实验室网站的搭建。
+		\item 独立负责校内选拔赛的组织筹备。
+		\item 激励队员参与日常训练。
+	\end{itemize}
+    \item
+    	\ressubheadingsingleline{大班学习委员}{2008 - 2012}
+	\begin{itemize}
+		\item 督促同学们按时提交作业
+		\item 对于个别同学进行课下辅导
+	\end{itemize}
+%    \item
+%	\ressubheadingsingleline{学生会~学习生活部副部长}{2009 - 2011}
+    \end{itemize}
+
+	\resheading{所获荣誉}
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\begin{itemize}
-		\item \ressubheading{ACM International Collegiate Programming Contest World Final}{Rank 27}
-			{Design and implement algorithm to solve the given problems with 2 partners in C/Java}{2013}
-		\item \ressubheading{ACM International Collegiate Programming Contest Asia Regional}{Rank 5}
-			{Design and implement algorithm to solve the given problems with 2 partners in C/Java}{2012}
-%		\item \ressubheading{Microsoft Beauty of Programming National Invition Contest}{Top 60}
-%			{Pairing Program: Data Analisis and Virtualization of Bing Search}{2013}
-		\item \ressubheading{Kingsoft Season Game Studio National Programming Challenge}{Rank 5}
-			{Design and implement algorithm to solve the given problems by oneself in C/Java}{2013}
-		\item \ressubheading{Star of Perfect National Invition Contest}{Rank 4}
-			{Team Project: Develop applications on smart phone}{2013}
+		\item \ressubheadingsingleline{校级优秀班干部}{2009}
+		\item \ressubheadingsingleline{校级学习优秀奖学金}{2009}
+		\item \ressubheadingsingleline{腾讯奖学金(5000元)}{2010}
+		\item \ressubheadingsingleline{校级棋类比赛团体亚军}{2009}
+		\item \ressubheadingsingleline{校级三国杀3v3比赛第三名}{2013}
 	\end{itemize}
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \resheading{Skills}
+    \resheading{技能}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \begin{itemize}
-        \item {\bf Development: } C/C++, QT, MPI, Java, C\#, Python.%, PHP.
-        \item {\bf Interest: } Algorithm, Math.
-        \item I'm curious about new technologies, love to try new things, and good at implementing new ideas.
+	\item 幽默诙谐, 曾多次在院1000余人元旦晚会中表演语言类节目。
+	\item 热爱运动, 坚持骑自行车上下班，坚持每两天去一次健身房。
+	\item 思维缜密, 能够熟练使用C/C++语言进行编程。
+        \item 较强的学习能力，对新技术有较高的热情，勇于尝试新鲜事物。
+	\item 好说话，容易与别人达成共识。
+	\item 熟练操作Windows, 熟练使用Word, Excel, PowerPoint等常见办公软件.
     \end{itemize}
+
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \resheading{Projects}
+   % \resheading{个人信息}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-            \begin{itemize}
-	    \item \ressubheadingsingleline{Presentation Aid System Based on Kinect}{2011-2012}
-	    \begin{itemize}
-	    	\item Helping to make a presentation more vividly. Making it easier to control the elements in the ppt by both gestures and actions. Most Importantly, allowing the user to draw and write one the screen directly without any equipment in hand.
-		\item My work was algorithm design and implementing. About 10 thousand lines of code in C\#.
-	    	\item Outstanding in the Student Research Training Program(SRTP). 
-	    \end{itemize}
-    	\end{itemize}
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \resheading{Social Activities}
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \begin{itemize}
-        \item \ressubheadingsingleline{Coach of BUAA ACM/ICPC team}{2012-2013}
-	\begin{itemize}
-		\item Maitaining web servers for the team.
-		\item Organizing and providing problems of BUAA Programming Contest.
-	\end{itemize}
-	\item \ressubheadingsingleline{Member of MSTC in BUAA}{2008-2009}
-    \end{itemize}
+    %\begin{itemize}
+     %   \item {\bf 兴趣爱好：} 三国杀、羽毛球、看视频
+   % \end{itemize}
 
 \end{document}
