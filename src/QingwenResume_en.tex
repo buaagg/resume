@@ -11,7 +11,7 @@
 
 \usepackage{titlesec} 
 \newpagestyle{main}{            
-	\setfoot{\textit{Compiled by pdf\TeX{} 3.1415926-2.4-1.40.13 (\TeX{} Live 2012) on OS X 10.8.4 (12E55)}}{}{}
+	\setfoot{\textit{Compiled by pdf\TeX{} on OS X}}{}{Last Modified: \today}
 }
 \pagestyle{main} 
 
@@ -46,7 +46,6 @@
 %Custom commands
 \newcommand{\resitem}[1]{\item #1 \vspace{0pt}}
 
-%\newcommand{\resheading}[1]{\vspace{8pt} \textbf{\Large #1 \vphantom{p\^{E}}}\vspace{-5pt}}
 \newcommand{\resheading}[1]{\vspace{5pt}
 
     \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
@@ -74,7 +73,7 @@
 %-----------------------------------------------------------
 \begin{document}
     \begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
-        \textbf{\Large Qingwen GUAN} & \textbf{\today} \\
+        \textbf{\Large Qingwen GUAN} & \\
         buaa.gg@gmail.com &  \\
 	(86) 134 0115 7995 & \\
 	https://github.com/buaagg & \\
@@ -84,17 +83,21 @@
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \begin{itemize}
     \item
-        \ressubheading{Beihang University}{Beijing}{M.S. Software Engineering}{2012 - 2015}
+	    \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{Beihang University} \textit{M.S. Software Engineering} & {2012 - 2015} \\
+	    \end{tabular*}\vspace{-6pt}
     \item
-        \ressubheading{Beihang University}{Beijing}{B.S. Software Engineering, B.S. Applied Mathematics}{2008 - 2012}
+	    \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{Beihang University} \textit{B.S. Software Engineering, Applied Mathematics} & 2008 - 2012 \\
+	    \end{tabular*}\vspace{-6pt}
     \end{itemize}
 
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\resheading{Achievements}
+	\resheading{Awards}
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\begin{itemize}
-		\item \ressubheadingsingleline{ACM-ICPC World Finals 2013}{Rank 27}
-		\item \ressubheadingsingleline{ACM-ICPC Asia Regional 2012}{Rank 5}
+		\item \ressubheadingsingleline{ACM ICPC World Finals 2013}{Rank 27}
+		\item \ressubheadingsingleline{ACM ICPC Asia Regional 2012}{Rank 5}
 		\item \ressubheadingsingleline{Google Code Jam 2013}{Top 500}
 		\item \ressubheadingsingleline{Facebook Hacker Cup 2014}{Top 500}
 %		\item \ressubheading{Stardard Chartered Code Marathon 2013}{Top 3}
@@ -108,7 +111,7 @@
 	\end{itemize}
 
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\resheading{Internship}
+	\resheading{Working Experience}
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\begin{itemize}
 		\item \ressubheadingsingleline{Microsoft Research Asia - Vision Computing Group}{Nov.2013 - Now}
@@ -127,30 +130,30 @@
 
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \resheading{Skills}
+    %\resheading{Skills}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \begin{itemize}
-        \item {\bf Development: } C/C++, QT, MPI, Java, C\#, Python.%, PHP.
-        \item {\bf Interest: } Algorithm, Math, read matrix67's blog, visit zhihu.com
+    %\begin{itemize}
+    %    \item {\bf Development: } C/C++, QT, MPI, Java, C\#, Python.%, PHP.
+     %   \item {\bf Interest: } Algorithm, Math, read matrix67's blog, visit zhihu.com
         %\item I'm curious about new technologies, love to try new things, and good at implementing new ideas.
-	\item {\bf Humorous:} Perform Funny Skits before thousands of students on New Years' Party for many times.
-    \end{itemize}
+%	\item {\bf Humorous:} Perform Funny Skits before thousands of students on New Years' Party for many times.
+ %   \end{itemize}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%    \resheading{Projects}
+    \resheading{Projects}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- %           \begin{itemize}
-%	    \item \ressubheadingsingleline{Presentation Aid System Based on Kinect}{2011-2012}
-%	    \begin{itemize}
-%	    	\item Helping to make a presentation more vividly. Making it easier to control the elements in the ppt by both gestures and actions. Most Importantly, allowing the user to draw and write one the screen directly without any equipment in hand.
-%		\item My work was algorithm design and implementing. About 10 thousand lines of code in C\#.
-%	    	\item Outstanding in the Student Research Training Program(SRTP). 
-%	    \end{itemize}
- %   	\end{itemize}
+            \begin{itemize}
+	    \item \ressubheadingsingleline{Presentation Aid System Based on Kinect}{2011-2012}
+	    \begin{itemize}
+	    	\item Helping to make a presentation more vividly. Making it easier to control the elements in the ppt by both gestures and actions. Most Importantly, allowing the user to draw and write one the screen directly without any equipment in hand.
+		\item My work was algorithm design and implementing. About 10 thousand lines of code in C\#.
+	    	\item Outstanding in the Student Research Training Program(SRTP). 
+	    \end{itemize}
+    	\end{itemize}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \resheading{Social Activities}
+    \resheading{Campus Experience}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \begin{itemize}
-        \item \ressubheadingsingleline{Coach of BUAA ACM/ICPC team}{2011-2013}
+        \item \ressubheadingsingleline{Coach of BUAA ACM ICPC team}{2011-2013}
 	\begin{itemize}
 		\item Maitaining web servers for the team.
 		\item Organizing and providing problems of BUAA Programming Contest.
