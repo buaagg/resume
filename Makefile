@@ -2,7 +2,7 @@ ALL: Tech NonTech
 
 en:
 	pdflatex -output-directory=bin src/QingwenResume_en.tex
-	pdflatex -output-directory=bin src/QingwenResume_en_twosides.tex
+%	pdflatex -output-directory=bin src/QingwenResume_en_twosides.tex
 
 Tech: en
 	xelatex -output-directory=bin src/QingwenResume_cn.tex
