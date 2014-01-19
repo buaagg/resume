@@ -6,12 +6,12 @@
 % (c) 2013 Qingwen GUAN <buaa.gg@gmail.com> 
 %
 %This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
-\documentclass[A4,11pt]{article}
+\documentclass[letterpaper,11pt]{article}
 \newlength{\outerbordwidth}
 
 \usepackage{titlesec} 
 \newpagestyle{main}{            
-	\setfoot{\textit{Compiled by pdf\TeX{} on OS X}}{}{Last Modified: \today}
+	\setfoot{\textit{Compiled by pdf\TeX{}}}{}{Last Modified: \today}
 }
 \pagestyle{main} 
 
@@ -20,8 +20,11 @@
 \raggedright
 \usepackage[svgnames]{xcolor}
 \usepackage{framed}
+\usepackage{graphicx} 
+\usepackage{setspace}
 \usepackage{tocloft}
 \usepackage[USenglish]{datetime}
+%\setCJKmainfont[BoldFont={SimHei},ItalicFont={KaiTi}]{SimSun}
 %-----------------------------------------------------------
 %Edit these values as you see fit
 \setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
@@ -46,8 +49,7 @@
 %Custom commands
 \newcommand{\resitem}[1]{\item #1 \vspace{0pt}}
 
-\newcommand{\resheading}[1]{\vspace{5pt}
-
+\newcommand{\resheading}[1]{\vspace{-5pt}
     \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
     \begin{shaded}
         \setlength{\fboxsep}{0pt}
@@ -57,106 +59,150 @@
 }
 
 \newcommand{\ressubheading}[4]{
-    \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+    \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
         \textbf{#1} & #2 \\
         \textit{#3} & \textit{#4} \\
-    \end{tabular*}\vspace{-6pt}
+    \end{tabular*}\vspace{-5pt}
 }
 
 \newcommand{\ressubheadingsingleline}[2]{
-    \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+    \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
         \textbf{#1} & #2 \\
-    \end{tabular*}\vspace{-6pt}
+    \end{tabular*}\vspace{-5pt}
 }
-
 
 %-----------------------------------------------------------
 \begin{document}
-    \begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
-        \textbf{\Large Qingwen GUAN} & \\
-        buaa.gg@gmail.com &  \\
-	(86) 134 0115 7995 & \\
-	https://github.com/buaagg & \\
+    \begin{tabular*}{7in}{c@{\extracolsep{\fill}}r}
+        \begin{tabular}{l}
+				\textbf{\Large Qingwen GUAN} \\[1.25 ex]
+				\includegraphics[height=4.5ex]{name} 
+		\end{tabular} 
+	& 
+	\begin{tabular}{r} buaa.gg@gmail.com\\
+	 (86) 134 0115 7995 \\
+	https://github.com/buaagg \\
+	\end{tabular}
     \end{tabular*}
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \resheading{Education}
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \begin{itemize}
+%	\vspace{-3pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Education}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
     \item
-        \ressubheading{Beihang University}{Beijing}{M.S. Software Engineering}{2012 - 2015}
+	    \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+		\textbf{Beihang University} \textit{M.S. Software Engineering} & 2012 - 2015 \\
+	    \end{tabular*}\vspace{-2pt}
     \item
-        \ressubheading{Beihang University}{Beijing}{B.S. Software Engineering, B.S. Applied Mathematics}{2008 - 2012}
+	    \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+		\textbf{Beihang University} \textit{B.S. Software Engineering} & 2008 - 2012 \\
+	    \end{tabular*}\vspace{-2pt}
+    \item
+	    \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+		\textbf{Beihang University} \textit{B.S. Applied Mathematics} & 2008 - 2012 \\
+	    \end{tabular*}\vspace{-2pt}
     \end{itemize}
 
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\resheading{Awards}
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\begin{itemize}
-		\item \ressubheadingsingleline{ACM-ICPC World Finals 2013}{Rank 27}
-		\item \ressubheadingsingleline{ACM-ICPC Asia Regional 2012}{Rank 5}
-		\item \ressubheadingsingleline{Google Code Jam 2013}{Top 500}
-		\item \ressubheadingsingleline{Facebook Hacker Cup 2014}{Top 500}
-		\item \ressubheading{Stardard Chartered Code Marathon 2013}{Top 3}
-			{Team Project: Data Mining and Analysis of web log}{}
-%		\item \ressubheading{Microsoft Beauty of Programming National Invition Contest}{Top 60}
-%			{Pairing Program: Data Analisis and Virtualization of Bing Search}{2013}
-		\item \ressubheading{Kingsoft Season Game Studio Programming Challenge 2013}{Rank 5}
-			{Design and implement algorithm to solve the given problems by oneself}{}
-		\item \ressubheading{Star of Perfect National Invition Contest 2013}{Rank 4}
-			{Team Project: Develop applications on smart phone}{}
-	\end{itemize}
-
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\resheading{Working Experience}
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\begin{itemize}
-		\item \ressubheadingsingleline{Microsoft Research Asia - Vision Computing Group}{Nov.2013 - Now}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Working Experience}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+	\item 
+		\ressubheadingsingleline{Microsoft Research Asia - Vision Computing Group}
+			{Nov.2013 - \phantom{Apr. 2014}}
 		\begin{itemize}
 			\item Rectify Curved Paper documents via Robust PCA Algorithm.
-			\item Implement and Optimize algorithm based on the paper ``Unwrapping Low-rank Textures on Generalized Cylindrical Surfaces''.
+			\item Implement and Optimize algorithm based on the paper 
+				``Unwrapping Low-rank Textures on Generalized Cylindrical Surfaces''.
 		\end{itemize}
-		\item \ressubheadingsingleline{Microsoft Research Asia - System Research Group}{Aug.2013 - Oct.2013}
+	\item \ressubheadingsingleline{Microsoft Research Asia - System Research Group}
+		{Aug.2013 - Oct.2013}
 		\begin{itemize}
-			\item Click Through Rate(CTR) Predict of Bing Search via Logistic Regression Algorithm.
-			\item About 2TB data, XXX lines of C++11 code, boost, omp, MPI.
-			\item It run 24 hours by hundreds of servers before, while it run 2 hours by only 20 servers now.  
-			\item Refactor the code from C\# to C++ and make the best of the physical memory.
+			\item Click Through Rate(CTR) Predict of Bing Search
+				via Logistic Regression Algorithm.
+			\item About 2TB data, 1666 lines of C++11 code, boost, omp, MPI.
+			\item From 24 hours by hundreds of servers, to 2 hours by only 20 servers.  
+			\item Refactor the code from C\# to C++ and 
+				make the best of the physical memory.
 		\end{itemize}
-	\end{itemize}
+	\end{itemize}	
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Projects}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+	\item \ressubheadingsingleline
+		{Presentation Aid System Based on Kinect}{2011 - 2012}
+		\begin{itemize}
+			\item Make it easier to control the elements in the ppt 
+				by both gestures and actions. 
+			\item Allow users to draw and write one the screen directly 
+				without any equipment in hand.
+			\item My work was algorithm design and implementing. 
+				About 10,000 lines of code in C\#.
+			\item Outstanding in the Student Research Training Program(SRTP). 
+		\end{itemize}
+\end{itemize}
 
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \resheading{Skills}
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \begin{itemize}
-        \item {\bf Development: } C/C++, QT, MPI, Java, C\#, Python.%, PHP.
-        \item {\bf Interest: } Algorithm, Math, read matrix67's blog, visit zhihu.com
-        %\item I'm curious about new technologies, love to try new things, and good at implementing new ideas.
-	\item {\bf Humorous:} Perform Funny Skits before thousands of students on New Years' Party for many times.
-    \end{itemize}
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \resheading{Projects}
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-            \begin{itemize}
-	    \item \ressubheadingsingleline{Presentation Aid System Based on Kinect}{2011-2012}
-	    \begin{itemize}
-	    	\item Helping to make a presentation more vividly. Making it easier to control the elements in the ppt by both gestures and actions. Most Importantly, allowing the user to draw and write one the screen directly without any equipment in hand.
-		\item My work was algorithm design and implementing. About 10 thousand lines of code in C\#.
-	    	\item Outstanding in the Student Research Training Program(SRTP). 
-	    \end{itemize}
-    	\end{itemize}
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \resheading{Campus Experience}
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \begin{itemize}
-        \item \ressubheadingsingleline{Coach of BUAA ACM/ICPC team}{2011-2013}
-	\begin{itemize}
-		\item Maitaining web servers for the team.
-		\item Organizing and providing problems of BUAA Programming Contest.
-	\end{itemize}
-    \end{itemize}
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    %\resheading{Personal Information}
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Campus Experience}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+	\item \ressubheadingsingleline{Coach of Beihang 
+		Collegiate Programming Contest Training Team}{2011 - 2013}
+		\begin{itemize}
+			\item Maitaining linux web servers for the laboratory.
+			\item Organizing BUAA Programming Contests 
+				and setting up problems for the contestants.
+		\end{itemize}
+\end{itemize}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Awards}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+	\item \ressubheadingsingleline
+		{Collegiate Programming Contest World Finals 2013}{Rank 27}
+	\item \ressubheadingsingleline
+		{Collegiate Programming Contest Asia Regional 2012}{Rank 5}
+	\item \ressubheadingsingleline
+		{Google Code Jam 2013}{Top 500}
+	\item \ressubheadingsingleline
+		{Facebook Hacker Cup 2014}{Top 500}
+	\item \ressubheading{Stardard Chartered Code Marathon 2013}{Top 3}
+		{Team Project: Data Mining and Analysis of web log}{}
+	\item \ressubheading
+		{Microsoft Beauty of Programming National Invition Contest 2013}{Top 60}
+		{Pairing Program: Data Analisis and Virtualization of Bing Search}{}
+	\item \ressubheading
+		{Kingsoft Season Game Studio Programming Challenge 2013}{Rank 5}
+		{Design and implement algorithm to solve the given problems by oneself}{}
+	\item \ressubheading
+		{Star of Perfect National Invition Contest 2013}{Rank 4}
+		{Team Project: Develop applications on smart phone}{}
+	\item \ressubheadingsingleline
+		{Beihang Sanguosha(Legends of The Three Kingdoms) 3v3 Match 2013}{Rank 3}
+	\item \ressubheadingsingleline
+		{Excellent Student Cadre 2008 - 2009}{6/141}
+	\item \ressubheadingsingleline
+		{Tencent Scholarship 2012}{2/141}
+	\item \ressubheadingsingleline
+		{Outstanding Academic Performance Scholarship 2008 - 2009}{}
+	\item \ressubheadingsingleline
+		{Social Work Scholarship 2008 - 2012}{}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\resheading{Skills \& Interests}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{itemize}
+%        \item {\bf Development: } C/C++, QT, MPI, Java, C\#, Python.%, PHP. %		\item {\bf Tools}: Linux, Mac, Vim, Git, \LaTeX 
+%        \vspace{-6pt}
+%        \item {\bf Interests: } Algorithm, Math, read matrix67's blog, visit zhihu.com(Chinese version of quora) \vspace{-2pt}
+%        \item Curious about new technologies, love to try new things, and good at implementing new ideas.
+%	\item {\bf Humorous:} Perform Funny Skits before thousands of students on New Years' Party for many times.
+%   \end{itemize}
+		
+
+	
 \end{document}

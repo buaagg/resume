@@ -50,26 +50,25 @@
 \newcommand{\resitem}[1]{\item #1 \vspace{0pt}}
 
 \newcommand{\resheading}[1]{\vspace{-5pt}
-
     \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
     \begin{shaded}
         \setlength{\fboxsep}{0pt}
         \framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
     \end{shaded}
-  }\vspace{-8pt}
+  }\vspace{-7pt}
 }
 
-\newcommand{\ressubheading}[4]{
+\newcommand{\ressubheading}[4]{ %\vspace{-5pt}
     \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
         \textbf{#1} & #2 \\
         \textit{#3} & \textit{#4} \\
-    \end{tabular*}\vspace{-6pt}
+    \end{tabular*}\vspace{-3pt}
 }
 
 \newcommand{\ressubheadingsingleline}[2]{
     \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
         \textbf{#1} & #2 \\
-    \end{tabular*}\vspace{-2pt}
+    \end{tabular*}\vspace{-4.5pt}
 }
 
 %-----------------------------------------------------------
@@ -86,14 +85,13 @@
 	\end{tabular}
     \end{tabular*}
 %	\vspace{-3pt}
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \resheading{Education}
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \begin{itemize}
-
-    \item
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Education}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+    \item \vspace{5pt}
 	    \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
-		\textbf{Beihang University} \textit{M.S. Software Engineering} & {2012 - 2015} \\
+		\textbf{Beihang University} \textit{M.S. Software Engineering} & 2012 - 2015 \\
 	    \end{tabular*}\vspace{-2pt}
     \item
 	    \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
@@ -105,57 +103,79 @@
 	    \end{tabular*}\vspace{-2pt}
     \end{itemize}
 
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\resheading{Working Experience}
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\begin{itemize}
-		\item 
-		\ressubheadingsingleline{Microsoft Research Asia - Vision Computing Group}{Nov.2013 - \hspace{45pt}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Working Experience}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+	\item 
+		\ressubheadingsingleline{Microsoft Research Asia - Vision Computing Group}
+			{Nov.2013 - \phantom{Apr. 2014}}
 		\begin{itemize}
 			\item Rectify Curved Paper documents via Robust PCA Algorithm.
-			\item Implement and Optimize algorithm based on the paper ``Unwrapping Low-rank Textures on Generalized Cylindrical Surfaces''.
+			\item Implement and Optimize algorithm based on the paper 
+				``Unwrapping Low-rank Textures on Generalized Cylindrical Surfaces''.
 		\end{itemize}
-		\item \ressubheadingsingleline{Microsoft Research Asia - System Research Group}{Aug.2013 - Oct.2013}
+	\item \ressubheadingsingleline{Microsoft Research Asia - System Research Group}
+		{Aug.2013 - Oct.2013}
 		\begin{itemize}
-			\item Click Through Rate(CTR) Predict of Bing Search via Logistic Regression Algorithm.
+			\item Click Through Rate(CTR) Predict of Bing Search
+				via Logistic Regression Algorithm.
 			\item About 2TB data, 1666 lines of C++11 code, boost, omp, MPI.
 			\item From 24 hours by hundreds of servers, to 2 hours by only 20 servers.  
-			\item Refactor the code from C\# to C++ and make the best of the physical memory.
+			\item Refactor the code from C\# to C++ and 
+				make the best of the physical memory.
 		\end{itemize}
 	\end{itemize}	
 
-   
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \resheading{Campus Experience}
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \begin{itemize}
-        \item \ressubheadingsingleline{Coach of BUAA Collegiate Programming Contest Training Team}{2011-2013}
-	\begin{itemize}
-		\item Maitaining linux web servers for the laboratory.
-		\item Organizing and providing problems for BUAA Programming Contests.
-	\end{itemize}
-	    \item \ressubheadingsingleline{Presentation Aid System Based on Kinect}{2011-2012}
-	    \begin{itemize}
-	    	\item Make it easier to control the elements in the ppt by both gestures and actions. 
-			\item Allow users to draw and write one the screen directly without any equipment in hand.
-		\item My work was algorithm design and implementing. About 10,000 lines of code in C\#.
-	    	\item Outstanding in the Student Research Training Program(SRTP). 
-	    \end{itemize}
-    \end{itemize}
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    %\resheading{Personal Information}
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Projects}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+	\item \ressubheadingsingleline
+		{Presentation Aid System Based on Kinect}{2011 - 2012}
+		\begin{itemize}
+			\item Make it easier to control the elements in the ppt 
+				by both gestures and actions. 
+			\item Allow users to draw and write one the screen directly 
+				without any equipment in hand.
+			\item My work was algorithm design and implementing. 
+				About 10,000 lines of code in C\#.
+			\item Outstanding in the Student Research Training Program(SRTP). 
+		\end{itemize}
+\end{itemize}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Campus Experience}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+	\item \ressubheadingsingleline{Coach of Beihang 
+		Collegiate Programming Contest Training Team}{2011 - 2013}
+		\begin{itemize}
+			\item Maitaining linux web servers for the laboratory.
+			\item Organizing BUAA Programming Contests 
+				and setting up problems for the contestants.
+		\end{itemize}
+\end{itemize}
 
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\resheading{Awards}
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\begin{itemize}
-		\item \ressubheadingsingleline{Collegiate Programming Contest World Finals 2013}{Rank 27}
-		\item \ressubheadingsingleline{Collegiate Programming Contest Asia Regional 2012}{Rank 5}
-		\item \ressubheadingsingleline{Beihang Sanguosha(Legends of The Three Kingdoms) 3v3 Match 2013}{Rank 3}
-		\item \ressubheadingsingleline{Excellent Student Cadre 2008-2009}{6/141}
-%		\item \ressubheadingsingleline{Google Code Jam 2013}{Top 500}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Awards}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+	\item \ressubheadingsingleline
+		{Collegiate Programming Contest World Finals 2013}{Rank 27}
+	\item \ressubheadingsingleline
+		{Collegiate Programming Contest Asia Regional 2012}{Rank 5}
+%	\item \ressubheadingsingleline{Google Code Jam 2013}{Top 500}
+	\item \ressubheadingsingleline
+		{Beihang Sanguosha(Legends of The Three Kingdoms) 3v3 Match 2013}{Rank 3}
+	\item \ressubheadingsingleline
+		{Excellent Student Cadre 2008 - 2009}{6/141}
+	\item \ressubheadingsingleline
+		{Tencent Scholarship 2012}{2/141}
+	\item \ressubheadingsingleline
+		{Outstanding Academic Performance Scholarship 2008 - 2009}{}
+	\item \ressubheadingsingleline
+		{Social Work Scholarship 2008 - 2012}{}
 %		\item \ressubheadingsingleline{Facebook Hacker Cup 2014}{Top 500}
 %		\item \ressubheading{Stardard Chartered Code Marathon 2013}{Top 3}
 %			{Team Project: Data Mining and Analysis of web log}{}
@@ -165,18 +185,18 @@
 %			{Design and implement algorithm to solve the given problems by oneself}{}
 %		\item \ressubheading{Star of Perfect National Invition Contest 2013}{Rank 4}
 %			{Team Project: Develop applications on smart phone}{}
-	\end{itemize}
+\end{itemize}
 
- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \resheading{Skills \& Interests}
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \begin{itemize}
-        \item {\bf Development: } C/C++, QT, MPI, Java, C\#, Python.%, PHP. \vspace{-2pt}
-%		\item {\bf Tools}: Linux, Mac, Vim, Git, \LaTeX \vspace{-2pt}
-        \item {\bf Interests: } Algorithm, Math, read matrix67's blog, visit zhihu.com(Chinese version of quora) \vspace{-2pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\resheading{Skills \& Interests}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{itemize}
+%        \item {\bf Development: } C/C++, QT, MPI, Java, C\#, Python.%, PHP. %		\item {\bf Tools}: Linux, Mac, Vim, Git, \LaTeX 
+%        \vspace{-6pt}
+%        \item {\bf Interests: } Algorithm, Math, read matrix67's blog, visit zhihu.com(Chinese version of quora) \vspace{-2pt}
 %        \item Curious about new technologies, love to try new things, and good at implementing new ideas.
 %	\item {\bf Humorous:} Perform Funny Skits before thousands of students on New Years' Party for many times.
-    \end{itemize}
+%   \end{itemize}
 		
 
 	
