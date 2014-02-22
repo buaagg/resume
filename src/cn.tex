@@ -6,12 +6,14 @@
 % (c) 2013 Qingwen GUAN <buaa.gg@gmail.com> 
 %
 %This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
-\documentclass[letterpaper,11pt]{article}
+\documentclass[letterpaper,11pt,UTF8,nofonts]{ctexart}
+%\usepackage{ctex}
+\setlength{\parindent}{0pt}
 \newlength{\outerbordwidth}
 
 \usepackage{titlesec} 
 \newpagestyle{main}{            
-	\setfoot{\textit{Compiled by pdf\TeX{}}}{}{Last Modified: \today}
+	\setfoot{\textit{用\XeLaTeX{}编译生成}}{}{上次修改时间: \today}
 }
 \pagestyle{main} 
 
@@ -23,8 +25,9 @@
 \usepackage{graphicx} 
 \usepackage{setspace}
 \usepackage{tocloft}
-\usepackage[USenglish]{datetime}
-%\setCJKmainfont[BoldFont={SimHei},ItalicFont={KaiTi}]{SimSun}
+\usepackage{gmutils} %for \XeLaTex
+%\usepackage[USenglish]{datetime}
+\setCJKmainfont[BoldFont={SimHei},ItalicFont={KaiTi}]{SimSun}
 %-----------------------------------------------------------
 %Edit these values as you see fit
 \setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
@@ -40,22 +43,22 @@
 \setlength{\paperheight}{11in}
 \setlength{\paperwidth}{8.5in}
 \setlength{\tabcolsep}{0in}
-\setlength{\textheight}{9.75in}
+\setlength{\textheight}{9.95in}
 \setlength{\textwidth}{7in}
 \setlength{\topmargin}{-0.3in}
 \setlength{\topskip}{0in}
 \setlength{\voffset}{0.1in}
 %-----------------------------------------------------------
 %Custom commands
-\newcommand{\resitem}[1]{\item #1 \vspace{0pt}}
+%\newcommand{\resitem}[1]{\item #1 \vspace{0pt}}
 
-\newcommand{\resheading}[1]{\vspace{-5pt}
+\newcommand{\resheading}[1]{\vspace{-6pt}
     \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
     \begin{shaded}
         \setlength{\fboxsep}{0pt}
         \framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
     \end{shaded}
-  }\vspace{-7pt}
+  }\vspace{-4pt}
 }
 
 \newcommand{\ressubheading}[4]{ %\vspace{-5pt}
@@ -65,14 +68,15 @@
     \end{tabular*}\vspace{-3pt}
 }
 
-\newcommand{\ressubheadingsingleline}[2]{
+\newcommand{\ressubheadingsingleline}[2]{ \vspace{-4pt}
     \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
         \textbf{#1} & #2 \\
-    \end{tabular*}\vspace{-4.5pt}
+    \end{tabular*}\vspace{-4pt}
 }
 
 %-----------------------------------------------------------
 \begin{document}
+\CTEXnoindent
 
 \begin{tabular*}{7in}{c@{\extracolsep{\fill}}r}
     \begin{tabular}{l}
@@ -86,100 +90,88 @@
 	\end{tabular}
 \end{tabular*}
 %	\vspace{-3pt}
-
-% TODO: objective
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resheading{Education}
+\resheading{教育经历}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{itemize}
-    \item \vspace{5pt}
+    \item %\vspace{-4pt}
 	    \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
-		\textbf{Beihang University} \textit{M.S. Software Engineering} & 2012 - 2015 \\
-	    \end{tabular*}\vspace{-2pt}
-    \item
+		\textbf{北京航空航天大学} \textit{软件工程专业~硕士} & 2012 - 2015 \\
+	    \end{tabular*}\vspace{-4pt}
+    \item \vspace{-4pt}
 	    \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
-		\textbf{Beihang University} \textit{B.S. Software Engineering} & 2008 - 2012 \\
-	    \end{tabular*}\vspace{-2pt}
-    \item
-	    \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
-		\textbf{Beihang University} \textit{B.S. Applied Mathematics} & 2008 - 2012 \\
-	    \end{tabular*}\vspace{-2pt}
+		\textbf{北京航空航天大学} \textit{应用数学专业/软件工程专业~学士} & 2008 - 2012 \\
+	    \end{tabular*}\vspace{-4pt}
+%    \item\vspace{-4pt}
+%	    \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+%		\textbf{北京航空航天大学} \textit{应用数学专业~学士} & 2008 - 2012 \\
+%	    \end{tabular*}\vspace{-4pt}
     \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resheading{Working Experience}
+\resheading{工作经历}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{itemize}
 	\item 
-		\ressubheadingsingleline{Microsoft Research Asia - Vision Computing Group}
-			{Nov.2013 - \phantom{}Apr.2014}
+		\ressubheadingsingleline{微软亚洲研究院 - 计算机视觉组}{2013/11 - 2014/04}
 		\begin{itemize}
-			\item Rectify Curved Paper documents via Robust PCA Algorithm.
-			\item Implement and Optimize algorithm based on the paper 
-				``Unwrapping Low-rank Textures on Generalized Cylindrical Surfaces''.
+			\item 通过Robust PCA算法校正弯曲的纸质文档。 
+			\item 实现论文``Unwrapping Low-rank Textures on Generalized Cylindrical Surfaces''，并优化算法。
 		\end{itemize}
-	\item \ressubheadingsingleline{Microsoft Research Asia - System Research Group}
-		{Aug.2013 - Oct.2013}
+	\item \ressubheadingsingleline{微软亚洲研究院 - 系统研究组}{2013/08 - 2013/10}
 		\begin{itemize}
-			\item Click Through Rate(CTR) Predict of Bing Search
-				via Logistic Regression Algorithm.
-			\item About 2TB data, 1666 lines of C++11 code, boost, omp, MPI.
-			\item From 24 hours by hundreds of servers, to 2 hours by only 20 servers.  
-			\item Refactor the code from C\# to C++ and 
-				make the best of the physical memory.
+			\item 用Logistic回归算法，预测Bing搜索的广告点击率。
+			\item 大约2TB数据量, 1666行C++11程序, 用到boost、omp、MPI等库。
+			\item 从100多台服务器运行24小时，优化到20台服务器只需运行2小时。
+			\item 将C\#代码重构为C++，并且尽量将数据放到物理内存。
 		\end{itemize}
 	\end{itemize}	
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resheading{Projects}
+\resheading{项目经历}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{itemize}
 	\item \ressubheadingsingleline
-		{Presentation Aid System Based on Kinect}{2011 - 2012}
+		{基于Kinect的演示辅助系统}{2011 - 2012}
 		\begin{itemize}
-			\item Make it easier to control the elements in the ppt 
-				by both gestures and actions. 
-			\item Allow users to draw and write one the screen directly 
-				without any equipment in hand.
-			\item My work was algorithm design and implementing. 
-				About 10,000 lines of code in C\#.
-			\item Outstanding in the Student Research Training Program(SRTP). 
+			\item 使用户更好地通过手势和动作操作PowerPoint中的元素。
+			\item 允许用户在不借助任何外界装置的情况下，在投影屏幕上直接写字和圈画。
+			\item 我的工作是算法的设计与实现，大约10,000行的C\#代码.
+			\item 在北航大学生科研计划(SRTP)中评价为``优秀''。
 		\end{itemize}
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resheading{Social Activities}
+\resheading{社会工作}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{itemize}
-	\item \ressubheadingsingleline{Coach of Beihang 
-		Collegiate Programming Contest Training Team}{2011 - 2013}
+	\item \ressubheadingsingleline{北航ACM校队学生教练}{2011 - 2013}
 		\begin{itemize}
-			\item Maitaining linux web servers for the laboratory.
-			\item Organizing BUAA Programming Contests 
-				and setting up problems for the contestants.
+			\item 维护实验室的linux web服务器和实验室网站的正常运行。
+			\item 负责校内选拔赛的组织筹备与题目准备。
+			\item 带领北航首次进入ACM-ICPC世界总决赛。
 		\end{itemize}
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resheading{Awards}
+\resheading{所获荣誉}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{itemize}
 	\item \ressubheadingsingleline
-		{ACM International Collegiate Programming Contest World Finals 2013}{Rank 27}
+		{2013年ACM-ICPC世界总决赛}{第27名}
 	\item \ressubheadingsingleline
-		{ACM International Collegiate Programming Contest Asia Regional 2012}{Rank 5}
+		{2012年ACM-ICPC亚洲区域赛}{第5名}
 %	\item \ressubheadingsingleline{Google Code Jam 2013}{Top 500}
+%	\item \ressubheadingsingleline
+%		{2013年北航三国杀3v3比赛}{第3名}
 	\item \ressubheadingsingleline
-		{Beihang Sanguosha(Legends of The Three Kingdoms) 3v3 Match 2013}{Rank 3}
+		{2008 - 2009年度北航优秀学生干部}{6/141}
 	\item \ressubheadingsingleline
-		{Excellent Student Cadre 2008 - 2009}{6/141}
+		{2010年度腾讯奖学金}{2/141}
 	\item \ressubheadingsingleline
-		{Tencent Scholarship 2012}{2/141}
-	\item \ressubheadingsingleline
-		{Outstanding Academic Performance Scholarship 2008 - 2009}{}
-	\item \ressubheadingsingleline
-		{Social Work Scholarship 2008 - 2012}{}
+		{2008 - 2009年度北航学习优秀奖学金}{10+/141}
+%	\item \ressubheadingsingleline
+%		{2008-2012年度北航社会工作奖学金}{}
 %		\item \ressubheadingsingleline{Facebook Hacker Cup 2014}{Top 500}
 %		\item \ressubheading{Stardard Chartered Code Marathon 2013}{Top 3}
 %			{Team Project: Data Mining and Analysis of web log}{}
