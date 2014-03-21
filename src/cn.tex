@@ -6,7 +6,7 @@
 % (c) 2013 Qingwen GUAN <buaa.gg@gmail.com> 
 %
 %This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
-\documentclass[letterpaper,11pt,UTF8,nofonts]{ctexart}
+\documentclass[a4paper,11pt,UTF8,nofonts]{ctexart}
 \setlength{\parindent}{0pt}
 \newlength{\outerbordwidth}
 
@@ -51,7 +51,6 @@
 \setlength{\voffset}{0.1in}
 %-----------------------------------------------------------
 %Custom commands
-%\newcommand{\resitem}[1]{\item #1 \vspace{0pt}}
 
 \newcommand{\resheading}[1]{\vspace{-6pt}
     \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
@@ -62,7 +61,7 @@
   }\vspace{-4pt}
 }
 
-\newcommand{\ressubheading}[4]{ %\vspace{-5pt}
+\newcommand{\ressubheading}[4]{ \vspace{-2pt}
     \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
         \textbf{#1} & #2 \\
         \textit{#3} & \textit{#4} \\
@@ -74,6 +73,13 @@
         \textbf{#1} & #2 \\
     \end{tabular*}\vspace{-4pt}
 }
+
+\newcommand{\resitem}[2]{
+    \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+        #1 & #2 \\
+    \end{tabular*} \vspace{-4pt}
+}
+
 
 %-----------------------------------------------------------
 \begin{document}
@@ -94,33 +100,38 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{教育经历}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{itemize}
+\begin{itemize} \setlength{\itemsep}{-2pt}
     \item %\vspace{-4pt}
 	    \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
 		\textbf{北京航空航天大学} \textit{软件工程专业~硕士} & 2012 - 2015 \\
-	    \end{tabular*}\vspace{-4pt}
-    \item \vspace{-4pt}
-	    \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
-		\textbf{北京航空航天大学} \textit{应用数学专业/软件工程专业~学士} & 2008 - 2012 \\
-	    \end{tabular*}\vspace{-4pt}
-%    \item\vspace{-4pt}
+	    \end{tabular*} %\vspace{-4pt}
+%    \item %\vspace{-4pt}
 %	    \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
-%		\textbf{北京航空航天大学} \textit{应用数学专业~学士} & 2008 - 2012 \\
-%	    \end{tabular*}\vspace{-4pt}
-    \end{itemize}
+%		\textbf{北京航空航天大学} \textit{应用数学专业~和~软件工程专业~学士} & 2008 - 2012 \\
+%	    \end{tabular*} %\vspace{-4pt}
+    \item %\vspace{-4pt}
+	    \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+		\textbf{北京航空航天大学} \textit{应用数学专业~学士} & 2008 - 2012 \\
+	    \end{tabular*} %\vspace{-4pt}
+    \item %\vspace{-4pt}
+	    \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+		\textbf{北京航空航天大学} \textit{软件工程专业~学士} & 2008 - 2012 \\
+	    \end{tabular*} %\vspace{-4pt}
+\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{工作经历}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{itemize}
+\begin{itemize} \setlength{\itemsep}{0pt}
 	\item 
 		\ressubheadingsingleline{微软亚洲研究院 - 计算机视觉组}{2013/11 - 2014/04}
-		\begin{itemize}
+		\begin{itemize} \setlength{\itemsep}{-1pt}
 			\item 通过Robust PCA算法校正弯曲的纸质文档。 
 			\item 实现论文``Unwrapping Low-rank Textures on Generalized Cylindrical Surfaces''，并优化算法。
 		\end{itemize}
-	\item \ressubheadingsingleline{微软亚洲研究院 - 系统研究组}{2013/08 - 2013/10}
-		\begin{itemize}
+	\item 
+		\ressubheadingsingleline{微软亚洲研究院 - 系统研究组}{2013/08 - 2013/10}
+		\begin{itemize} \setlength{\itemsep}{-1pt}
 			\item 用Logistic回归算法，预测Bing搜索的广告点击率。
 			\item 大约2TB数据量, 1666行C++11程序, 用到boost、omp、MPI等库。
 			\item 从100多台服务器运行24小时，优化到20台服务器只需运行2小时。
@@ -131,10 +142,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{项目经历}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{itemize}
+\begin{itemize} \setlength{\itemsep}{0pt}
 	\item \ressubheadingsingleline
 		{基于Kinect的演示辅助系统}{2011 - 2012}
-		\begin{itemize}
+		\begin{itemize} \setlength{\itemsep}{-1pt}
 			\item 使用户更好地通过手势和动作操作PowerPoint中的元素。
 			\item 允许用户在不借助任何外界装置的情况下，在投影屏幕上直接写字和圈画。
 			\item 我的工作是算法的设计与实现，大约10,000行的C\#代码.
@@ -145,32 +156,31 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{社会工作}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{itemize}
+\begin{itemize} \setlength{\itemsep}{0pt}
 	\item \ressubheadingsingleline{北航ACM校队学生教练}{2011 - 2013}
-		\begin{itemize}
-			\item 维护实验室的linux web服务器和实验室网站的正常运行。
+		\begin{itemize} \setlength{\itemsep}{-1pt}
+			\item 维护实验室的\textbf{linux web}服务器和实验室网站的正常运行。
 			\item 负责校内选拔赛的组织筹备与题目准备。
-			\item 带领北航首次进入ACM-ICPC世界总决赛。
+%			\item 带领北航首次进入ACM-ICPC世界总决赛。
 		\end{itemize}
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{所获荣誉}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{itemize}
-	\item \ressubheadingsingleline
+\begin{itemize} \setlength{\itemsep}{0pt}
+	\item \resitem
 		{2013年ACM-ICPC世界总决赛}{第27名}
-	\item \ressubheadingsingleline
+	\item \resitem
 		{2012年ACM-ICPC亚洲区域赛}{第5名}
 %	\item \ressubheadingsingleline{Google Code Jam 2013}{Top 500}
-%	\item \ressubheadingsingleline
-%		{2013年北航三国杀3v3比赛}{第3名}
-	\item \ressubheadingsingleline
+	\item \resitem{2013年北航三国杀3v3比赛}{第3名}
+	\item \resitem
 		{2008 - 2009年度北航优秀学生干部}{6/141}
-	\item \ressubheadingsingleline
+	\item \resitem
 		{2010年度腾讯奖学金}{2/141}
-	\item \ressubheadingsingleline
-		{2008 - 2009年度北航学习优秀奖学金}{10+/141}
+	\item \resitem
+		{2008 - 2009年度北航学习优秀奖学金}{12/141}
 %	\item \ressubheadingsingleline
 %		{2008-2012年度北航社会工作奖学金}{}
 %		\item \ressubheadingsingleline{Facebook Hacker Cup 2014}{Top 500}

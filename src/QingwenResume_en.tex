@@ -6,7 +6,7 @@
 % (c) 2013 Qingwen GUAN <buaa.gg@gmail.com> 
 %
 %This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
-\documentclass[letterpaper,11pt]{article}
+\documentclass[a4paper,11pt]{article}
 
 \newlength{\outerbordwidth}
 
@@ -48,7 +48,7 @@
 \setlength{\voffset}{0.1in}
 %-----------------------------------------------------------
 %Custom commands
-\newcommand{\resitem}[1]{\item #1 \vspace{0pt}}
+%\newcommand{\resitem}[1]{\item #1 \vspace{0pt}}
 
 \newcommand{\resheading}[1]{\vspace{-5pt}
     \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
@@ -72,6 +72,12 @@
     \end{tabular*}\vspace{-4.5pt}
 }
 
+\newcommand{\resitem}[2]{
+    \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+        #1 & #2 \\
+    \end{tabular*}%\vspace{-4.5pt}
+}
+
 %-----------------------------------------------------------
 \begin{document}
 
@@ -93,37 +99,37 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{Education}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{itemize}
-    \item \vspace{5pt}
+\begin{itemize} \setlength{\itemsep}{0pt}
+    \item %\vspace{5pt}
 	    \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
 		\textbf{Beihang University} \textit{M.S. Software Engineering} & 2012 - 2015 \\
-	    \end{tabular*}\vspace{-2pt}
+	    \end{tabular*}%\vspace{-2pt}
     \item
 	    \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
 		\textbf{Beihang University} \textit{B.S. Software Engineering} & 2008 - 2012 \\
-	    \end{tabular*}\vspace{-2pt}
+	    \end{tabular*}%\vspace{-2pt}
     \item
 	    \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
 		\textbf{Beihang University} \textit{B.S. Applied Mathematics} & 2008 - 2012 \\
-	    \end{tabular*}\vspace{-2pt}
+	    \end{tabular*}%\vspace{-2pt}
     \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{Working Experience}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{itemize}
+\begin{itemize} \setlength{\itemsep}{0pt}
 	\item 
 		\ressubheadingsingleline{Microsoft Research Asia - Vision Computing Group}
 			{Nov.2013 - \phantom{}Apr.2014}
-		\begin{itemize}
+		\begin{itemize} \setlength{\itemsep}{0pt}
 			\item Rectify Curved Paper documents 
 				via Robust Principal Component Analysis Algorithm.
-			\item Implement and Optimize algorithm based on the paper 
+			\item Implement and improve algorithm based on the paper 
 				``Unwrapping Low-rank Textures on Generalized Cylindrical Surfaces''.
 		\end{itemize}
 	\item \ressubheadingsingleline{Microsoft Research Asia - System Research Group}
 		{Aug.2013 - Oct.2013}
-		\begin{itemize}
+		\begin{itemize} \setlength{\itemsep}{0pt}
 			\item Click Through Rate(CTR) Predict of Bing Search
 				via Logistic Regression Algorithm.
 			\item About 2TB data, 1666 lines of C++11 code, boost, omp, MPI.
@@ -139,8 +145,8 @@
 \begin{itemize}
 	\item \ressubheadingsingleline
 		{Presentation Aid System Based on Kinect}{2011 - 2012}
-		\begin{itemize}
-			\item Make it easier to control the elements in the ppt 
+		\begin{itemize} \setlength{\itemsep}{0pt}
+			\item Make it easier to control the elements in ppt 
 				by both gestures and actions. 
 			\item Allow users to draw and write one the screen directly 
 				without any equipment in hand.
@@ -157,7 +163,8 @@
 	\item \ressubheadingsingleline{Coach of Beihang 
 		Collegiate Programming Contest Training Team}{2011 - 2013}
 		\begin{itemize}
-			\item Maitaining linux web servers for the laboratory.
+			\item Maitaining \textbf{linux web servers} 
+				and online judge system for the laboratory.
 			\item Organizing BUAA Programming Contests 
 				and setting up problems for the contestants.
 		\end{itemize}
@@ -166,21 +173,21 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{Awards}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{itemize}
-	\item \ressubheadingsingleline
+\begin{itemize} \setlength{\itemsep}{0pt}
+	\item \resitem
 		{ACM International Collegiate Programming Contest World Finals 2013}{Rank 27}
-	\item \ressubheadingsingleline
+	\item \resitem
 		{ACM International Collegiate Programming Contest Asia Regional 2012}{Rank 5}
 %	\item \ressubheadingsingleline{Google Code Jam 2013}{Top 500}
-	\item \ressubheadingsingleline
+	\item \resitem
 		{Beihang Sanguosha(Legends of The Three Kingdoms) 3v3 Match 2013}{Rank 3}
-	\item \ressubheadingsingleline
+	\item \resitem
 		{Excellent Student Cadre 2008 - 2009}{6/141}
-	\item \ressubheadingsingleline
+	\item \resitem
 		{Tencent Scholarship 2012}{2/141}
-	\item \ressubheadingsingleline
-		{Outstanding Academic Performance Scholarship 2008 - 2009}{}
-	\item \ressubheadingsingleline
+	\item \resitem
+		{Outstanding Academic Performance Scholarship 2008 - 2009}{12/141}
+	\item \resitem
 		{Social Work Scholarship 2008 - 2012}{}
 %		\item \ressubheadingsingleline{Facebook Hacker Cup 2014}{Top 500}
 %		\item \ressubheading{Stardard Chartered Code Marathon 2013}{Top 3}
