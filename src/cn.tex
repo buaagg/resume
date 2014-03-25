@@ -15,7 +15,7 @@
 
 \usepackage{titlesec} 
 \newpagestyle{main}{            
-	\setfoot{\textit{用\XeLaTeX{}编译生成}}{}{上次修改时间: \today}
+	\setfoot{\textit{用Xe\LaTeX{}编译生成}}{}{上次修改时间: \today}
 }
 \pagestyle{main} 
 
@@ -41,24 +41,27 @@
 \setlength{\headheight}{-0.25in}
 \setlength{\headsep}{0in}
 \setlength{\oddsidemargin}{-0.25in}
-\setlength{\paperheight}{11in}
-\setlength{\paperwidth}{8.5in}
+%\setlength{\paperheight}{11in}
+%\setlength{\paperwidth}{8.5in}
 \setlength{\tabcolsep}{0in}
-\setlength{\textheight}{9.95in}
+%\setlength{\textheight}{9.95in}
+\setlength{\textheight}{10in}
 \setlength{\textwidth}{7in}
-\setlength{\topmargin}{-0.3in}
+%\setlength{\topmargin}{-0.3in}
+\setlength{\topmargin}{-0.1in}
 \setlength{\topskip}{0in}
-\setlength{\voffset}{0.1in}
+%\setlength{\voffset}{0.1in}
+\setlength{\hoffset}{-0.1in}
 %-----------------------------------------------------------
 %Custom commands
 
-\newcommand{\resheading}[1]{\vspace{-6pt}
+\newcommand{\resheading}[1]{\vspace{-8pt}
     \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
     \begin{shaded}
         \setlength{\fboxsep}{0pt}
         \framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
     \end{shaded}
-  }\vspace{-4pt}
+  }\vspace{-8pt}
 }
 
 \newcommand{\ressubheading}[4]{ \vspace{-2pt}
@@ -74,10 +77,10 @@
     \end{tabular*}\vspace{-4pt}
 }
 
-\newcommand{\resitem}[2]{
+\newcommand{\resitem}[2]{ \vspace{-2pt}
     \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
         #1 & #2 \\
-    \end{tabular*} \vspace{-4pt}
+    \end{tabular*} \vspace{-2pt}
 }
 
 
@@ -101,7 +104,7 @@
 \resheading{教育经历}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{itemize} \setlength{\itemsep}{-2pt}
-    \item %\vspace{-4pt}
+    \item \vspace{8pt}
 	    \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
 		\textbf{北京航空航天大学} \textit{软件工程专业~硕士} & 2012 - 2015 \\
 	    \end{tabular*} %\vspace{-4pt}
@@ -111,18 +114,18 @@
 %	    \end{tabular*} %\vspace{-4pt}
     \item %\vspace{-4pt}
 	    \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
-		\textbf{北京航空航天大学} \textit{应用数学专业~学士} & 2008 - 2012 \\
+		\textbf{北京航空航天大学} \textit{软件工程专业~学士} & 2008 - 2012 \\
 	    \end{tabular*} %\vspace{-4pt}
     \item %\vspace{-4pt}
 	    \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
-		\textbf{北京航空航天大学} \textit{软件工程专业~学士} & 2008 - 2012 \\
+		\textbf{北京航空航天大学} \textit{应用数学专业~学士}(\textit{第二学位}) & 2008 - 2012 \\
 	    \end{tabular*} %\vspace{-4pt}
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{工作经历}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{itemize} \setlength{\itemsep}{0pt}
+\begin{itemize} \setlength{\itemsep}{-1pt}
 	\item 
 		\ressubheadingsingleline{微软亚洲研究院 - 计算机视觉组}{2013/11 - 2014/04}
 		\begin{itemize} \setlength{\itemsep}{-1pt}
@@ -137,12 +140,18 @@
 			\item 从100多台服务器运行24小时，优化到20台服务器只需运行2小时。
 			\item 将C\#代码重构为C++，并且尽量将数据放到物理内存。
 		\end{itemize}
+		\item \ressubheadingsingleline{北航ACM校队 - 学生教练}{2011/09 - 2013/08}
+		\begin{itemize} \setlength{\itemsep}{-1pt}
+			\item 维护实验室的\textbf{linux web}服务器和实验室网站的正常运行。
+			\item 负责校内选拔赛的组织筹备与题目准备。
+%			\item 带领北航首次进入ACM-ICPC世界总决赛。
+		\end{itemize}
 	\end{itemize}	
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{项目经历}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{itemize} \setlength{\itemsep}{0pt}
+\begin{itemize} \setlength{\itemsep}{-1pt}
 	\item \ressubheadingsingleline
 		{基于Kinect的演示辅助系统}{2011 - 2012}
 		\begin{itemize} \setlength{\itemsep}{-1pt}
@@ -154,27 +163,19 @@
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resheading{社会工作}
+%\resheading{社会工作}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{itemize} \setlength{\itemsep}{0pt}
-	\item \ressubheadingsingleline{北航ACM校队学生教练}{2011 - 2013}
-		\begin{itemize} \setlength{\itemsep}{-1pt}
-			\item 维护实验室的\textbf{linux web}服务器和实验室网站的正常运行。
-			\item 负责校内选拔赛的组织筹备与题目准备。
-%			\item 带领北航首次进入ACM-ICPC世界总决赛。
-		\end{itemize}
-\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{所获荣誉}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{itemize} \setlength{\itemsep}{0pt}
+\begin{itemize} \setlength{\itemsep}{-2pt}
 	\item \resitem
 		{2013年ACM-ICPC世界总决赛}{第27名}
 	\item \resitem
 		{2012年ACM-ICPC亚洲区域赛}{第5名}
 %	\item \ressubheadingsingleline{Google Code Jam 2013}{Top 500}
-	\item \resitem{2013年北航三国杀3v3比赛}{第3名}
+%	\item \resitem{2013年北航三国杀3v3比赛}{第3名}
 	\item \resitem
 		{2008 - 2009年度北航优秀学生干部}{6/141}
 	\item \resitem
@@ -195,15 +196,21 @@
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\resheading{Skills \& Interests}
+\resheading{Skills}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\begin{itemize}
+\begin{itemize} \setlength{\itemsep}{-1pt}
+        \item {\bf Language:} C++11(QT, MPI) $>$ Java $>$
+        	 C\#, Python $>$ Matlab/Octave $>$ SQL%, PHP. 	
+       \vspace{-4pt}
+        \item {\bf OS:} Linux $>$ Windows $>$ OS X(daily use)%, Vim, Git, \LaTeX 
+      \vspace{-5pt}
+
 %        \item {\bf Development: } C/C++, QT, MPI, Java, C\#, Python.%, PHP. %		\item {\bf Tools}: Linux, Mac, Vim, Git, \LaTeX 
 %        \vspace{-6pt}
 %        \item {\bf Interests: } Algorithm, Math, read matrix67's blog, visit zhihu.com(Chinese version of quora) \vspace{-2pt}
 %        \item Curious about new technologies, love to try new things, and good at implementing new ideas.
 %	\item {\bf Humorous:} Perform Funny Skits before thousands of students on New Years' Party for many times.
-%   \end{itemize}
+  \end{itemize}
 		
 
 	
