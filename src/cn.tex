@@ -79,7 +79,7 @@
 
 \newcommand{\resitem}[2]{ \vspace{-2pt}
     \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
-        #1 & #2 \\
+        \textbf{#1} & #2 \\
     \end{tabular*} \vspace{-2pt}
 }
 
@@ -114,14 +114,14 @@
 %	    \end{tabular*} %\vspace{-4pt}
     \item %\vspace{-4pt}
 	    \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
-		\textbf{北京航空航天大学} \textit{软件工程专业~学士} & 2008 - 2012 \\
+		\textbf{北京航空航天大学} \textit{软件工程专业~学士}(主修) & 2008 - 2012 \\
 	    \end{tabular*} %\vspace{-4pt}
 	\vspace{-7pt} \begin{itemize} \setlength{\itemsep}{0pt}
 	    \item 高分课程: 高级语言程序设计(C++)~(100), 算法(99), 高等数学(99), 线性代数(99)	
 	\end{itemize} \vspace{-5pt}
     \item %\vspace{-4pt}
 	    \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
-		\textbf{北京航空航天大学} \textit{应用数学专业~学士}(\textit{第二学位}) & 2008 - 2012 \\
+		\textbf{北京航空航天大学} \textit{应用数学专业~学士}({辅修}) & 2008 - 2012 \\
 	    \end{tabular*} %\vspace{-4pt}
 \end{itemize}
 
@@ -133,15 +133,16 @@
 		\ressubheadingsingleline{微软亚洲研究院 - 计算机视觉组}{2013/11 - 2014/04}
 		\begin{itemize} \setlength{\itemsep}{-1pt}
 			\item 通过Robust PCA算法校正弯曲的纸质文档。 
-			\item 实现论文``Unwrapping Low-rank Textures on Generalized Cylindrical Surfaces''，并优化算法。
+%			\item 实现论文``Unwrapping Low-rank Textures on Generalized Cylindrical Surfaces''，并优化算法。
+			\item 用C++11实现算法，并且从100s加速到10s.
 		\end{itemize}
 	\item 
 		\ressubheadingsingleline{微软亚洲研究院 - 系统研究组}{2013/08 - 2013/10}
 		\begin{itemize} \setlength{\itemsep}{-1pt}
 			\item 用Logistic回归算法，预测Bing搜索的广告点击率。
-			\item 大约2TB数据量, 1666行C++11程序, 用到boost、omp、MPI等库。
 			\item 从100多台服务器运行24小时，优化到20台服务器只需运行2小时。
-			\item 将C\#代码重构为C++，并且尽量将数据放到物理内存。
+			\item 大约2TB数据量, 2000行C++11程序, 用到boost、omp、MPI等库。
+			\item 将C{\#}代码重构为C++，并且尽量将数据放到物理内存。
 		\end{itemize}
 		\item \ressubheadingsingleline{北航ACM校队 - 学生教练}{2011/09 - 2013/08}
 		\begin{itemize} \setlength{\itemsep}{-1pt}
@@ -161,7 +162,7 @@
 			\item 使用户更好地通过手势和动作操作PowerPoint中的元素。
 			\item 允许用户在不借助任何外界装置的情况下，在投影屏幕上直接写字和圈画。
 			\item 我的工作是算法的设计与实现，大约10,000行的C\#代码.
-			\item 在北航大学生科研计划(SRTP)中评价为``优秀''。
+%			\item 在北航大学生科研计划(SRTP)中评价为``优秀''。
 		\end{itemize}
 \end{itemize}
 
@@ -173,10 +174,16 @@
 \resheading{所获荣誉}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{itemize} \setlength{\itemsep}{-2pt}
-	\item \resitem
-		{2013年ACM-ICPC世界总决赛}{第27名}
-	\item \resitem
-		{2012年ACM-ICPC亚洲区域赛}{第5名}
+	\item \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+       	\textbf{2013年ACM-ICPC世界总决赛} & 第27名 \\[-1pt]
+		\textbf{2012年ACM-ICPC亚洲区域赛} & 第5名 \\[-1pt]
+		\textit{算法设计与实现，三人组队，5个小时，C++}
+    \end{tabular*}%\vspace{-4.5pt}
+
+%	\item \resitem
+%		{2013年ACM-ICPC世界总决赛}{第27名}
+%	\item \resitem
+%		{2012年ACM-ICPC亚洲区域赛}{第5名}
 %	\item \ressubheadingsingleline{Google Code Jam 2013}{Top 500}
 %	\item \resitem{2013年北航三国杀3v3比赛}{第3名}
 	\item \resitem
@@ -199,13 +206,13 @@
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resheading{Skills}
+\resheading{技能}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{itemize} \setlength{\itemsep}{-1pt}
-        \item {\bf Language:} C++11(QT, MPI) $>$ Java $>$
+        \item {\bf 语言:} C++ $\gg$ English $>$ Java $>$
         	 C\# $>$ Python $>$ Matlab/Octave $>$ SQL%, PHP. 	
        \vspace{-4pt}
-        \item {\bf OS:} Linux $>$ Windows $>$ OS X(daily use)%, Vim, Git, \LaTeX 
+        \item {\bf 操作系统:} Linux $\ge$ Windows $>$ OS X(日常使用)%, Vim, Git, \LaTeX 
       \vspace{-5pt}
 
 %        \item {\bf Development: } C/C++, QT, MPI, Java, C\#, Python.%, PHP. %		\item {\bf Tools}: Linux, Mac, Vim, Git, \LaTeX 
