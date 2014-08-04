@@ -10,16 +10,11 @@
 \setlength{\parindent}{0pt}
 \newlength{\outerbordwidth}
 
-\setCJKmainfont[BoldFont={SimHei},ItalicFont={KaiTi}]{SimSun}
+%\setCJKmainfont[BoldFont={SimHei},ItalicFont={KaiTi}]{SimSun}
+\setCJKmainfont[BoldFont={Heiti SC},ItalicFont={STKaiti}]{STSong}
 
+\pagestyle{empty}
 
-\usepackage{titlesec} 
-\newpagestyle{main}{            
-	\setfoot{\textit{用Xe\LaTeX{}编译生成}}{}{上次修改时间: \today}
-}
-\pagestyle{main} 
-
-%\pagestyle{empty}
 \raggedbottom
 \raggedright
 \usepackage[svgnames]{xcolor}
@@ -64,25 +59,21 @@
   }\vspace{-8pt}
 }
 
-\newcommand{\ressubheading}[4]{ \vspace{-2pt}
+\newcommand{\ressubheadingsingleline}[2]{ %\vspace{-4pt}
     \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
         \textbf{#1} & #2 \\
-        \textit{#3} & \textit{#4} \\
     \end{tabular*}\vspace{-3pt}
 }
 
-\newcommand{\ressubheadingsingleline}[2]{ \vspace{-4pt}
+\newcommand{\resitem}[2]{ 
     \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
         \textbf{#1} & #2 \\
-    \end{tabular*}\vspace{-4pt}
+    \end{tabular*} 
 }
 
-\newcommand{\resitem}[2]{ \vspace{-2pt}
-    \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
-        \textbf{#1} & #2 \\
-    \end{tabular*} \vspace{-2pt}
-}
+\newcommand{\CC}{C\nolinebreak\hspace{-.05em}\raisebox{.4ex}{\tiny\bf +}\nolinebreak\hspace{-.10em}\raisebox{.4ex}{\tiny\bf +}}
 
+\linespread{1.0} 
 
 %-----------------------------------------------------------
 \begin{document}
@@ -91,80 +82,77 @@
 \begin{tabular*}{7in}{c@{\extracolsep{\fill}}r}
     \begin{tabular}{l}
 		\textbf{\Large Qingwen GUAN} \\[1.25 ex]
-		\includegraphics[height=4.5ex]{name} 
+		\includegraphics[height=4.5ex]{name.png} 
+
 	\end{tabular} &
 	\begin{tabular}{r} 
 		buaa.gg@gmail.com\\
  		(86) 134 0115 7995 \\
 		https://github.com/buaagg \\
 	\end{tabular}
+	\vspace{-3pt}
 \end{tabular*}
-%	\vspace{-3pt}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{教育经历}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{itemize} \setlength{\itemsep}{-2pt}
+\begin{itemize} \setlength{\itemsep}{-1pt}
     \item \vspace{8pt}
 	    \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
 		\textbf{北京航空航天大学} \textit{软件工程专业~硕士}(\textit{保研}) & 2012 - 2015 \\
-	    \end{tabular*} %\vspace{-4pt}
-%    \item %\vspace{-4pt}
-%	    \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
-%		\textbf{北京航空航天大学} \textit{应用数学专业~和~软件工程专业~学士} & 2008 - 2012 \\
-%	    \end{tabular*} %\vspace{-4pt}
-    \item %\vspace{-4pt}
+	    \end{tabular*} 
+    \item 
 	    \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
 		\textbf{北京航空航天大学} \textit{软件工程专业~学士}(主修) & 2008 - 2012 \\
-	    \end{tabular*} %\vspace{-4pt}
-	\vspace{-7pt} \begin{itemize} \setlength{\itemsep}{0pt}
-	    \item 高分课程: 高级语言程序设计(C++)~(100), 算法(99), 高等数学(99), 线性代数(99)	
-	\end{itemize} \vspace{-5pt}
-    \item %\vspace{-4pt}
+	    \end{tabular*}
+    \item 
 	    \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
 		\textbf{北京航空航天大学} \textit{应用数学专业~学士}({辅修}) & 2008 - 2012 \\
-	    \end{tabular*} %\vspace{-4pt}
+	    \end{tabular*} 
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{工作经历}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{itemize} \setlength{\itemsep}{-1pt}
+	\item
+		\ressubheadingsingleline{摩根大通银行(量化研究组) - 实习生}{2014/07 - 2014/12}
+		\begin{itemize} 
+			\item 在一个巨大的C++库上进行开发。
+			\item 对于asset名字设计一个hash函数。
+		\end{itemize}
 	\item 
-		\ressubheadingsingleline{微软亚洲研究院 - 计算机视觉组}{2013/11 - 2014/04}
-		\begin{itemize} \setlength{\itemsep}{-1pt}
+		\ressubheadingsingleline{微软亚洲研究院(计算视觉组) - 实习生}{2013/11 - 2014/04}
+		\begin{itemize} 
 			\item 通过Robust PCA算法校正弯曲的纸质文档。 
 %			\item 实现论文``Unwrapping Low-rank Textures on Generalized Cylindrical Surfaces''，并优化算法。
 			\item 用C++11实现算法，并且从100s加速到10s.
 		\end{itemize}
 	\item 
-		\ressubheadingsingleline{微软亚洲研究院 - 系统研究组}{2013/08 - 2013/10}
-		\begin{itemize} \setlength{\itemsep}{-1pt}
+		\ressubheadingsingleline{微软亚洲研究院(系统研究组) - 实习生}{2013/08 - 2013/10}
+		\begin{itemize}
 			\item 用Logistic回归算法，预测Bing搜索的广告点击率。
 			\item 从100多台服务器运行24小时，优化到20台服务器只需运行2小时。
 			\item 大约2TB数据量, 2000行C++11程序, 用到boost、omp、MPI等库。
-			\item 将C{\#}代码重构为C++，并且尽量将数据放到物理内存。
+%			\item 将C{\#}代码重构为C++，并且尽量将数据放到物理内存。
 		\end{itemize}
-		\item \ressubheadingsingleline{北航ACM校队 - 学生教练}{2011/09 - 2013/08}
-		\begin{itemize} \setlength{\itemsep}{-1pt}
-			\item 维护实验室的\textbf{linux web}服务器和实验室网站的正常运行。
-			\item 负责校内选拔赛的组织筹备与题目准备。
-%			\item 带领北航首次进入ACM-ICPC世界总决赛。
-		\end{itemize}
-	\end{itemize}	
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resheading{项目经历}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{itemize} \setlength{\itemsep}{-1pt}
-	\item \ressubheadingsingleline
-		{基于Kinect的演示辅助系统}{2011 - 2012}
-		\begin{itemize} \setlength{\itemsep}{-1pt}
-			\item 使用户更好地通过手势和动作操作PowerPoint中的元素。
-			\item 允许用户在不借助任何外界装置的情况下，在投影屏幕上直接写字和圈画。
+	\item \ressubheadingsingleline{北京航空行天大学(PAR实验室) － 成员}{2011 - 2012}
+		\begin{itemize} 
+			\item 基于Kinect的演示辅助系统的设计与实现。
+%			\item 允许用户在不借助任何外界装置的情况下，在投影屏幕上直接写字和圈画。
 			\item 我的工作是算法的设计与实现，大约10,000行的C\#代码.
-%			\item 在北航大学生科研计划(SRTP)中评价为``优秀''。
+			\item 在北航大学生科研计划(SRTP)中评价为``优秀''。
+		\end{itemize}
+	\item \ressubheadingsingleline{北京航空行天大学(ACM校队) - 学生教练}{2012 - 2013}
+		\begin{itemize} 
+			\item 维护实验室的linux web服务器和实验室网站的正常运行。
+			\item 负责校内选拔赛的组织筹备与题目准备。
+		\end{itemize}
+	\item \ressubheadingsingleline{北京航空航天大学(软件学院) - 助教}{2009 - 2011}
+		\begin{itemize} 
+			\item \CC{}, 数据结构, 算法。
 		\end{itemize}
 \end{itemize}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\resheading{社会工作}
@@ -173,25 +161,25 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{所获荣誉}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{itemize} \setlength{\itemsep}{-2pt}
-	\item \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
-       	\textbf{2013年ACM-ICPC世界总决赛} & 第27名 \\[-1pt]
-		\textbf{2012年ACM-ICPC亚洲区域赛} & 第5名 \\[-1pt]
-		\textit{算法设计与实现，三人组队，5个小时，C++}
-    \end{tabular*}%\vspace{-4.5pt}
+\begin{itemize} \setlength{\itemsep}{-1pt}
+%	\item \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+%       	\textbf{2013年ACM-ICPC世界总决赛} & 第27名 \\[-1pt]
+%		\textbf{2012年ACM-ICPC亚洲区域赛} & 第5名 \\[-1pt]
+%		\textit{算法设计与实现，三人组队，5个小时，C++}
+%    \end{tabular*}%\vspace{-4.5pt}
 
-%	\item \resitem
-%		{2013年ACM-ICPC世界总决赛}{第27名}
-%	\item \resitem
-%		{2012年ACM-ICPC亚洲区域赛}{第5名}
-%	\item \ressubheadingsingleline{Google Code Jam 2013}{Top 500}
-%	\item \resitem{2013年北航三国杀3v3比赛}{第3名}
+	\item \resitem
+		{2013年ACM-ICPC世界总决赛}{第27名}
+	\item \resitem
+		{2012年ACM-ICPC亚洲区域赛}{第5名}
+	\item \resitem{2013年Google Code Jam}{Top 500}
 	\item \resitem
 		{2010年度腾讯奖学金}{2/141}
 	\item \resitem
 		{2008 - 2009年度北航优秀学生干部}{6/141}
 	\item \resitem
 		{2008 - 2009年度北航学习优秀奖学金}{12/141}
+	\item \resitem{2013年北航三国杀3v3比赛}{第3名}
 %	\item \ressubheadingsingleline
 %		{2008-2012年度北航社会工作奖学金}{}
 %		\item \ressubheadingsingleline{Facebook Hacker Cup 2014}{Top 500}
@@ -209,15 +197,14 @@
 \resheading{技能}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{itemize} \setlength{\itemsep}{-1pt}
-        \item {\bf 语言:} C++ $\gg$ English $>$ Java $>$
-        	 C\# $>$ Python $>$ Matlab/Octave $>$ SQL%, PHP. 	
-       \vspace{-4pt}
-        \item {\bf 操作系统:} Linux $\ge$ Windows $>$ OS X(日常使用)%, Vim, Git, \LaTeX 
+        \item {\bf 语言:} C++ $>$ Java $>$
+        	 C\# $>$ Python $>$ Matlab/Octave 
+	\item{\bf 工具:} \LaTeX, GIT, SVN, GCC
+ %      \vspace{-4pt}
+%        \item {\bf 操作系统:} Linux $\ge$ Windows $>$ OS X(日常使用)%, Vim, Git, \LaTeX 
       \vspace{-5pt}
 
-%        \item {\bf Development: } C/C++, QT, MPI, Java, C\#, Python.%, PHP. %		\item {\bf Tools}: Linux, Mac, Vim, Git, \LaTeX 
 %        \vspace{-6pt}
-%        \item {\bf Interests: } Algorithm, Math, read matrix67's blog, visit zhihu.com(Chinese version of quora) \vspace{-2pt}
 %        \item Curious about new technologies, love to try new things, and good at implementing new ideas.
 %	\item {\bf Humorous:} Perform Funny Skits before thousands of students on New Years' Party for many times.
   \end{itemize}
