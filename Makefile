@@ -1,15 +1,11 @@
-ALL: Tech NonTech
+ALL: en cn
 
 en:
-	pdflatex -output-directory=bin src/QingwenResume_en.tex
-%	pdflatex -output-directory=bin src/QingwenResume_en_twosides.tex
+	pushd src && pdflatex -output-directory=../bin en.tex && popd
 
-Tech: en
-	xelatex -output-directory=bin src/QingwenResume_cn.tex
+cn:
+	pushd src && xelatex -output-directory=../bin cn.tex && popd
 
-NonTech:
-	xelatex -output-directory=bin src/QingwenResume_cn_non_tech.tex 
-
-.PHONY: Tech NonTech en
+.PHONY: en cn
 
 
