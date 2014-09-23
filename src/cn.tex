@@ -50,6 +50,12 @@
 %-----------------------------------------------------------
 %Custom commands
 
+\usepackage{titlesec} 
+\newpagestyle{main}{            
+		\setfoot{\textit{用Xe\LaTeX{}编译生成}}{}{上次修改时间: \today}
+}
+\pagestyle{main} 
+
 \newcommand{\resheading}[1]{\vspace{-8pt}
     \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
     \begin{shaded}
@@ -72,6 +78,7 @@
 }
 
 \newcommand{\CC}{C\nolinebreak\hspace{-.05em}\raisebox{.4ex}{\tiny\bf +}\nolinebreak\hspace{-.10em}\raisebox{.4ex}{\tiny\bf +}}
+\newcommand{\CSharp}{C\nolinebreak\hspace{-.05em}\raisebox{.6ex}{\scriptsize\bf{\#}}}
 
 \linespread{1.0} 
 
@@ -104,6 +111,9 @@
 	    \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
 		\textbf{北京航空航天大学} \textit{软件工程专业~学士}(主修) & 2008 - 2012 \\
 	    \end{tabular*}
+		\vspace{-7pt} \begin{itemize} \setlength{\itemsep}{0pt}
+		    \item 高分课程: 高级语言程序设计(\CC)~(100), 算法(99), 高等数学(99), 线性代数(99)	
+		    	\end{itemize} \vspace{-5pt}
     \item 
 	    \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
 		\textbf{北京航空航天大学} \textit{应用数学专业~学士}({辅修}) & 2008 - 2012 \\
@@ -117,22 +127,22 @@
 	\item
 		\ressubheadingsingleline{摩根大通银行(量化研究组) - 实习生}{2014/07 - 2014/12}
 		\begin{itemize} 
-			\item 在一个巨大的C++库上进行开发。
-			\item 对于asset名字设计一个hash函数。
+			\item 在一个巨大的\CC{}库上进行开发。
+			\item 对于asset名字调研hash函数。
 		\end{itemize}
 	\item 
 		\ressubheadingsingleline{微软亚洲研究院(计算视觉组) - 实习生}{2013/11 - 2014/04}
 		\begin{itemize} 
 			\item 通过Robust PCA算法校正弯曲的纸质文档。 
 %			\item 实现论文``Unwrapping Low-rank Textures on Generalized Cylindrical Surfaces''，并优化算法。
-			\item 用C++11实现算法，并且从100s加速到10s.
+			\item 用\CC{}11实现算法，并且从100s加速到10s.
 		\end{itemize}
 	\item 
 		\ressubheadingsingleline{微软亚洲研究院(系统研究组) - 实习生}{2013/08 - 2013/10}
 		\begin{itemize}
 			\item 用Logistic回归算法，预测Bing搜索的广告点击率。
 			\item 从100多台服务器运行24小时，优化到20台服务器只需运行2小时。
-			\item 大约2TB数据量, 2000行C++11程序, 用到boost、omp、MPI等库。
+			\item 大约2TB数据量, 2000行\CC{}11程序, 用到boost、omp、MPI等库。
 %			\item 将C{\#}代码重构为C++，并且尽量将数据放到物理内存。
 		\end{itemize}
 \end{itemize}
@@ -145,8 +155,8 @@
 		\begin{itemize} 
 			\item 基于Kinect的演示辅助系统的设计与实现。
 %			\item 允许用户在不借助任何外界装置的情况下，在投影屏幕上直接写字和圈画。
-			\item 我的工作是算法的设计与实现，大约10,000行的C\#代码.
-			\item 在北航大学生科研计划(SRTP)中评价为``优秀''。
+			\item 我的工作是算法的设计与实现，大约10,000行的\CSharp{}代码.
+%			\item 在北航大学生科研计划(SRTP)中评价为``优秀''。
 		\end{itemize}
 	\item \ressubheadingsingleline{北京航空行天大学(ACM校队) - 学生教练}{2012 - 2013}
 		\begin{itemize} 
@@ -178,7 +188,7 @@
 		{2013年ACM-ICPC世界总决赛}{第27名}
 	\item \resitem
 		{2012年ACM-ICPC亚洲区域赛}{第5名}
-	\item \resitem{2013年Google Code Jam}{Top 500}
+	\item \resitem{2013年Google Code Jam}{前500名}
 	\item \resitem
 		{2010年度腾讯奖学金}{2/141}
 	\item \resitem
@@ -203,8 +213,8 @@
 \resheading{技能}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{itemize} \setlength{\itemsep}{-1pt}
-        \item {\bf 语言:} C++ $>$ Java $>$
-        	 C\# $>$ Python $>$ Matlab/Octave 
+        \item {\bf 语言:} \CC{} $>$ Java $>$
+        	 \CSharp{} $>$ Python $>$ Matlab/Octave 
 %	\item{\bf 工具:} \LaTeX, GIT, SVN, GCC
  %      \vspace{-4pt}
 %        \item {\bf 操作系统:} Linux $\ge$ Windows $>$ OS X(日常使用)%, Vim, Git, \LaTeX 
